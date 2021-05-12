@@ -9,20 +9,20 @@ public class HealthBar : MonoBehaviour
 	public Slider slider;
 	public Gradient gradient;
 	public Image fill;
+	public Health health;
 
-	public void SetMaxHealth(int health)
+	public void SetHealth()
 	{
-		slider.maxValue = health;
-		slider.value = health;
-
-		fill.color = gradient.Evaluate(1f);
-	}
-
-	public void SetHealth(int health)
-	{
-		slider.value = health;
-
+		slider.maxValue = health.maxHealth;
+		slider.value = health.health;
 		fill.color = gradient.Evaluate(slider.normalizedValue);
 	}
 
+    public void Update()
+    {
+        if (health != null && Input.GetKeyDown(KeyCode.Space))
+        {
+			health.TakeDamage(20);
+        }
+    }
 }
