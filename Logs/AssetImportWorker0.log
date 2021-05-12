@@ -2106,3 +2106,11 @@ System memory in use after: 135.6 MB.
 Unloading 18 unused Assets to reduce memory usage. Loaded Objects now: 3960.
 Total: 6.357900 ms (FindLiveObjects: 0.846900 ms CreateObjectMapping: 0.427100 ms MarkObjects: 4.490000 ms  DeleteObjects: 0.589800 ms)
 
+========================================================================
+Received Import Request.
+  Time since last request: 6258.313143 seconds.
+  path: Assets/CameraFollow.cs
+  artifactKey: Guid(b8a6bc24da06c5046bd113b83c5a6b8e) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/CameraFollow.cs using Guid(b8a6bc24da06c5046bd113b83c5a6b8e) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '0975c6264a001a6a4163d5dcd9702967') in 0.602122 seconds
+  Import took 0.660507 seconds .
+
