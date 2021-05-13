@@ -18,7 +18,7 @@ public class Fly : MonoBehaviour
         {
             var enemyHealth = hitInfo.GetComponent<Health>();
             enemyHealth.TakeDamage(damage);
-            Destroy(gameObject);
         }
+        Destroy(gameObject);
     }
 }
