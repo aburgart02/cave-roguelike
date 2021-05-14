@@ -7,9 +7,11 @@ public class Fly : MonoBehaviour
     public float speed = 20f;
     public int damage = 40;
     public Rigidbody2D rb;
+    public GameObject ShootAnimation;
     void Start()
     {
         rb.velocity = transform.right * speed;
+        Instantiate(ShootAnimation, gameObject.transform.position, gameObject.transform.rotation);
     }
 
     void OnTriggerEnter2D(Collider2D hitInfo)
