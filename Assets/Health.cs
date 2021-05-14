@@ -7,6 +7,7 @@ public class Health : MonoBehaviour
     public float maxHealth = 100f;
     public float health = 100f;
     public HealthBar healthBar;
+    public GameObject DeathAnimation;
 
     public void TakeDamage(int damage)
     {
@@ -28,6 +29,7 @@ public class Health : MonoBehaviour
 
     public void Die()
     {
+        Instantiate(DeathAnimation, gameObject.transform.position, gameObject.transform.rotation);
         Destroy(gameObject);
     }
 }

@@ -209,7 +209,7 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 5135863935140522828}
-  m_Enabled: 1
+  m_Enabled: 0
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: cd8389b8c8d49f64598a9da6c9bdcabc, type: 3}
   m_Name: 
@@ -231,6 +231,7 @@ MonoBehaviour:
   maxHealth: 100
   health: 100
   healthBar: {fileID: 0}
+  DeathAnimation: {fileID: 100004, guid: 7867af58a6ec48846ae807eb4022fbaa, type: 3}
 --- !u!114 &5135863935140522869
 MonoBehaviour:
   m_ObjectHideFlags: 0
