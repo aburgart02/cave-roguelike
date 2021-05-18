@@ -6,15 +6,22 @@ public class Fire : MonoBehaviour
 {
     public Transform Fireposition;
     public GameObject arrow;
+    public int maxBullets = 1;
+    public List<GameObject> bullets = new List<GameObject>();
 
     public void Shoot()
     {
-        Instantiate(arrow, Fireposition.position, Fireposition.rotation);
+        bullets.Add(Instantiate(arrow, Fireposition.position, Fireposition.rotation));
     }
 
     void Update()
     {
-        if (Input.GetButtonDown("Fire1"))
+        foreach (var bullet in bullets.ToArray())
+        {
+            if (bullet == null)
+                bullets.Remove(bullet);
+        }
+        if (Input.GetButtonDown("Fire1") && bullets.Count < maxBullets)
         {
             Shoot();
         }
