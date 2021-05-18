@@ -5,16 +5,15 @@ using UnityEngine;
 public class Spawn : MonoBehaviour
 {
     public GameObject item;
-    private Transform player;
+    public Transform spawnPosition;
 
-    private void Start()
+    public void Start()
     {
-        player = GameObject.FindGameObjectWithTag("Player").transform;
+        spawnPosition = GameObject.FindGameObjectWithTag("DropPosition").transform;
     }
 
     public void SpawnDroppedItem()
     {
-        Vector2 playerPos = new Vector2(player.position.x, player.position.y + 1);
-        Instantiate(item, playerPos, Quaternion.identity);
+        Instantiate(item, spawnPosition.position, Quaternion.identity);
     }
 }
