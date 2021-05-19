@@ -8,7 +8,6 @@ public class OpenDoor : MonoBehaviour
     {
         if (hitInfo.gameObject.CompareTag("Key1"))
         {
-            Debug.Log("1");
             Destroy(gameObject);
             Destroy(hitInfo.gameObject);
         }
