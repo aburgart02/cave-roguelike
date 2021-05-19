@@ -543,7 +543,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   maxHealth: 100
-  health: 100000
+  health: 100
   healthBar: {fileID: 270671838}
   DeathAnimation: {fileID: 0}
 --- !u!1 &344820923
