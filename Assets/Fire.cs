@@ -8,7 +8,8 @@ public class Fire : MonoBehaviour
     public GameObject arrow;
     public int maxBullets = 1;
     public List<GameObject> bullets = new List<GameObject>();
-
+    [SerializeField] private AudioSource Shot;
+    
     public void Shoot()
     {
         bullets.Add(Instantiate(arrow, Fireposition.position, Fireposition.rotation));
@@ -24,6 +25,7 @@ public class Fire : MonoBehaviour
         if (Input.GetButtonDown("Fire1") && bullets.Count < maxBullets)
         {
             Shoot();
+            Shot.Play();
         }
     }
 }

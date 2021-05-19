@@ -134,3 +134,4 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   item: {fileID: 9155602792314967864, guid: 1c84181f74f291f429988257a59bf691, type: 3}
+  spawnPosition: {fileID: 0}
