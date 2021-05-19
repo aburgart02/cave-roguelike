@@ -6,6 +6,10 @@ TagManager:
   tags:
   - Sword
   - Enemy
+  - DropPosition
+  - FxTemporaire
+  - ExplosionPosition
+  - Key1
   layers:
   - Default
   - TransparentFX

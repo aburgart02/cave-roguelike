@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class Health : MonoBehaviour
 {
@@ -19,10 +20,12 @@ public class Health : MonoBehaviour
         
         if (health <= 0)
         {
-            if (!gameObject.CompareTag("Player"))
+            if (gameObject.CompareTag("Player"))
             {
-                Die();
+                SceneManager.LoadScene(0);
             }
+            else
+                Die();
         }
 
     }
