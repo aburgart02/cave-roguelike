@@ -10,6 +10,11 @@ TagManager:
   - FxTemporaire
   - ExplosionPosition
   - Key1
+  - BlueKey
+  - PinkKey
+  - GreenKey
+  - RedKey
+  - GreyKey
   layers:
   - Default
   - TransparentFX
