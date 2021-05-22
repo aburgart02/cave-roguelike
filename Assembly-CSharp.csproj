@@ -101,6 +101,7 @@
     <Compile Include="Assets\bts\Grid.cs" />
     <Compile Include="Assets\bts\Node.cs" />
     <Compile Include="Assets\bts\Heap.cs" />
+    <Compile Include="Assets\Mouse_Follow.cs" />
   </ItemGroup>
   <ItemGroup>
      <None Include="Assets\JMO Assets\WarFX\Shaders\WFX_S Multiply Soft.shader" />
