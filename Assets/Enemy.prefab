@@ -40,14 +40,13 @@ GameObject:
   m_Component:
   - component: {fileID: 5135863935140522864}
   - component: {fileID: 5135863935140522867}
-  - component: {fileID: 5135863935140522866}
-  - component: {fileID: 5135863935140522829}
   - component: {fileID: 5135863935140522870}
   - component: {fileID: 5135863935140522865}
   - component: {fileID: 5135863935140522871}
   - component: {fileID: 5135863935140522868}
   - component: {fileID: 5135863935140522869}
   - component: {fileID: -3364460239420775206}
+  - component: {fileID: 1194843119798652730}
   m_Layer: 0
   m_Name: Enemy
   m_TagString: Enemy
@@ -121,41 +120,6 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
---- !u!195 &5135863935140522866
-NavMeshAgent:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 5135863935140522828}
-  m_Enabled: 1
-  m_AgentTypeID: 0
-  m_Radius: 0.43
-  m_Speed: 1.5
-  m_Acceleration: 8
-  avoidancePriority: 50
-  m_AngularSpeed: 120
-  m_StoppingDistance: 0
-  m_AutoTraverseOffMeshLink: 1
-  m_AutoBraking: 1
-  m_AutoRepath: 1
-  m_Height: 0.72
-  m_BaseOffset: 0.36
-  m_WalkableMask: 4294967295
-  m_ObstacleAvoidanceType: 4
---- !u!114 &5135863935140522829
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 5135863935140522828}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: f016e259324621d419e862eef2e56583, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  target: {fileID: 0}
 --- !u!61 &5135863935140522870
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -345,3 +309,17 @@ AudioSource:
     m_PreInfinity: 2
     m_PostInfinity: 2
     m_RotationOrder: 4
+--- !u!114 &1194843119798652730
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5135863935140522828}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 02a210f8edee27d499970de2f03038f0, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  target: {fileID: 0}
+  speed: 2

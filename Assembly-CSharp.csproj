@@ -82,6 +82,7 @@
     <Compile Include="Assets\JMO Assets\WarFX\Scripts\WFX_LightFlicker.cs" />
     <Compile Include="Assets\Pickup.cs" />
     <Compile Include="Assets\JMO Assets\Cartoon FX\Demo\Assets\CFX_Demo_RandomDirectionTranslate.cs" />
+    <Compile Include="Assets\KeyDetection.cs" />
     <Compile Include="Assets\OpenDoor.cs" />
     <Compile Include="Assets\JMO Assets\Cartoon FX\Demo\Assets\CFX_Demo_Translate.cs" />
     <Compile Include="Assets\Spawn.cs" />
@@ -94,7 +95,12 @@
     <Compile Include="Assets\JMO Assets\WarFX\Demo\Assets\WFX_Demo_New.cs" />
     <Compile Include="Assets\Destroy.cs" />
     <Compile Include="Assets\Inventory.cs" />
-    <Compile Include="Assets\KeyDetection.cs" />
+    <Compile Include="Assets\vrotebal.cs" />
+    <Compile Include="Assets\bts\Unit.cs" />
+    <Compile Include="Assets\bts\Pathfind.cs" />
+    <Compile Include="Assets\bts\Grid.cs" />
+    <Compile Include="Assets\bts\Node.cs" />
+    <Compile Include="Assets\bts\Heap.cs" />
   </ItemGroup>
   <ItemGroup>
      <None Include="Assets\JMO Assets\WarFX\Shaders\WFX_S Multiply Soft.shader" />
