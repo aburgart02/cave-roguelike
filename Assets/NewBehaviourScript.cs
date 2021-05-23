@@ -29,11 +29,11 @@ public class NewBehaviourScript : MonoBehaviour
         // ¬ этом случае не будут автоматически происходить collision и их придетс€ обрабатывать вручную
 
         rigidBodyComponent.velocity = movementVector * acceleration;
-        if (movementVector.magnitude > Mathf.Epsilon)
-        {
-            var angle = new Vector3(0, 0, movementVector.GetAngle());
-            transform.rotation = Quaternion.Euler(angle);
-        }
+        //if (movementVector.magnitude > Mathf.Epsilon)
+        //{
+        //    var angle = new Vector3(0, 0, movementVector.GetAngle());
+        //    transform.rotation = Quaternion.Euler(angle);
+        //}
 
         // ƒругой вариант, без Rigidbody2D.
         // ”казываютс€ абсолютные координаты, а не смещение.
