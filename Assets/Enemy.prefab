@@ -197,6 +197,7 @@ MonoBehaviour:
   health: 100
   healthBar: {fileID: 0}
   DeathAnimation: {fileID: 100004, guid: 7867af58a6ec48846ae807eb4022fbaa, type: 3}
+  item: {fileID: 8876403750433503901, guid: f5ea15f068121da4caa28b5dad098e07, type: 3}
 --- !u!114 &5135863935140522869
 MonoBehaviour:
   m_ObjectHideFlags: 0
