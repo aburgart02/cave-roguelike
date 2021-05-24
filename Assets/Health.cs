@@ -9,6 +9,8 @@ public class Health : MonoBehaviour
     public float health = 100f;
     public HealthBar healthBar;
     public GameObject DeathAnimation;
+    public GameObject item;
+    public Transform spawnPosition;
 
     public void TakeDamage(int damage)
     {
@@ -25,9 +27,25 @@ public class Health : MonoBehaviour
                 SceneManager.LoadScene(0);
             }
             else
+            {
+                var value = Random.Range(0,10);
+                if (value < 5)
+                {
+                    spawnPosition = GameObject.FindGameObjectWithTag("DropPosition").transform;
+                    Instantiate(item, spawnPosition.position, Quaternion.identity);
+                }
                 Die();
+            }
         }
+    }
 
+    public void HealPlayer(int heal)
+    {
+        health += heal;
+        if (healthBar != null)
+        {
+            healthBar.SetHealth();
+        }
     }
 
     public void Die()
