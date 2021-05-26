@@ -24,7 +24,6 @@ public class KeyDetection : MonoBehaviour
     {
         if (collision.gameObject.CompareTag("Player") && canBeOpenedByKey && Input.GetKeyDown(KeyCode.F))
         {
-            Debug.Log("Idi na hui");
             opening = !opening;
         }
     }
@@ -32,9 +31,9 @@ public class KeyDetection : MonoBehaviour
     void Update()
     {
         if (opening)
-            door.transform.position = Vector3.Lerp(door.transform.position, openingPosition.transform.position,  Time.deltaTime / 4);
+            door.transform.position = Vector3.Lerp(door.transform.position, openingPosition.transform.position,  Time.deltaTime / 2);
         else
-            door.transform.position = Vector3.Lerp(door.transform.position, closingPosition.transform.position, Time.deltaTime / 4);
+            door.transform.position = Vector3.Lerp(door.transform.position, closingPosition.transform.position, Time.deltaTime / 2);
     }
 
 
