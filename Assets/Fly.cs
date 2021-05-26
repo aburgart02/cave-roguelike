@@ -10,8 +10,10 @@ public class Fly : MonoBehaviour
     public GameObject ShootAnimation;
     void Start()
     {
-        rb.velocity = transform.right * speed;
-        Instantiate(ShootAnimation, gameObject.transform.position, gameObject.transform.rotation);
+        if (rb != null)
+            rb.velocity = transform.right * speed;
+        if (ShootAnimation != null)
+            Instantiate(ShootAnimation, gameObject.transform.position, gameObject.transform.rotation);
     }
 
     void OnTriggerEnter2D(Collider2D hitInfo)

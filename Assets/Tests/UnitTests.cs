@@ -7,6 +7,16 @@ using UnityEngine.SceneManagement;
 
 public class UnitTests
 {
+    public static GameObject CreateGameObjectWithCollider(bool isTrigger)
+    {
+        var obj = new GameObject();
+        obj.AddComponent<Rigidbody2D>();
+        obj.GetComponent<Rigidbody2D>().gravityScale = 0;
+        obj.AddComponent<BoxCollider2D>();
+        obj.GetComponent<BoxCollider2D>().isTrigger = isTrigger;
+        return obj;
+    }
+
     [UnityTest]
     public IEnumerator HealthTakeDamage()
     {
@@ -68,6 +78,7 @@ public class UnitTests
         menu.PlayGame();
         yield return null;
         Assert.AreEqual("1", SceneManager.GetActiveScene().name);
+        SceneManager.LoadScene(1);
     }
 
     [UnityTest]
@@ -96,7 +107,7 @@ public class UnitTests
     }
 
     [UnityTest]
-    public IEnumerator SpawnItem()
+    public IEnumerator SpawnNewObjectAfterDrop()
     {
         var gameObject = new GameObject();
         var spawn = gameObject.AddComponent<Spawn>();
@@ -104,23 +115,37 @@ public class UnitTests
         spawn.spawnPosition = (new GameObject()).transform;
         spawn.spawnPosition.position = new Vector2(1, 1);
         spawn.item.tag = "Test";
-        var item = GameObject.FindWithTag("Test");
+        var testObjectsCountBeforeSpawnDroppedItem = GameObject.FindGameObjectsWithTag("Test").Length;
         spawn.SpawnDroppedItem();
+        var testObjectsCountAfterSpawnDroppedItem = GameObject.FindGameObjectsWithTag("Test").Length;
         yield return null;
-        Assert.That(item != null);
+        Assert.AreEqual(1, testObjectsCountAfterSpawnDroppedItem - testObjectsCountBeforeSpawnDroppedItem);
     }
 
     [UnityTest]
-    public IEnumerator ShootsWithPeriod()
+    public IEnumerator PeriodShootSpawnObjectAfterShoot()
     {
         var gameObject = new GameObject();
         var periodShoot = gameObject.AddComponent<PeriodShoot>();
         periodShoot.bullet = new GameObject();
         periodShoot.firePoint = (new GameObject()).transform;
         periodShoot.bullet.tag = "Test";
+        var testObjectsCountBeforeSpawnDroppedItem = GameObject.FindGameObjectsWithTag("Test").Length;
         periodShoot.Shoot();
-        var item = GameObject.FindWithTag("Test");
+        var testObjectsCountAfterSpawnDroppedItem = GameObject.FindGameObjectsWithTag("Test").Length;
         yield return null;
-        Assert.That(item != null);
+        Assert.AreEqual(1, testObjectsCountAfterSpawnDroppedItem - testObjectsCountBeforeSpawnDroppedItem);
+    }
+
+    [UnityTest]
+    public IEnumerator FlyObjectDieWhenTrigger()
+    {
+        var bullet = CreateGameObjectWithCollider(true);
+        bullet.AddComponent<Fly>();
+        var objForCollision = CreateGameObjectWithCollider(false);
+        bullet.transform.position = new Vector2(0, 0);
+        objForCollision.transform.position = new Vector2(0, 0);
+        yield return null;
+        Assert.That(bullet == null);
     }
 }
