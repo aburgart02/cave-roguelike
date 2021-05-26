@@ -1,2 +1,2 @@
-# Starting compiling Tests.dll
-C:\Program Files\Unity\Hub\Editor\2020.3.2f1\Editor\Data\Tools\RoslynScripts\unity_csc.bat /noconfig @Temp/UnityTempFile-c61f89e742aa7ac4ab69e2904369869d
+# Starting compiling NewAssembly.dll
+C:\Program Files\Unity\Hub\Editor\2020.3.2f1\Editor\Data\Tools\RoslynScripts\unity_csc.bat /noconfig @Temp/UnityTempFile-59952e735f122c645bc1adf768192fb2

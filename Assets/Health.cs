@@ -12,7 +12,7 @@ public class Health : MonoBehaviour
     public GameObject item;
     public Transform spawnPosition;
 
-    public void TakeDamage(int damage)
+    public void TakeDamage(float damage)
     {
         health -= damage;
         if (healthBar != null)
@@ -31,14 +31,15 @@ public class Health : MonoBehaviour
                 var value = Random.Range(0,10);
                 if (value < 5)
                 {
-                    Instantiate(item, spawnPosition.position, Quaternion.identity);
+                    if (item != null)
+                        Instantiate(item, spawnPosition.position, Quaternion.identity);
                 }
                 Die();
             }
         }
     }
 
-    public void HealPlayer(int heal)
+    public void HealPlayer(float heal)
     {
         health += heal;
         if (health > maxHealth)

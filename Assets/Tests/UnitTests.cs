@@ -24,7 +24,7 @@ public class UnitTests
         var health = gameObject.AddComponent<Health>();
         health.TakeDamage(20);
         yield return null;
-        Assert.AreEqual(80, health.health);
+        Assert.AreEqual(health.maxHealth - 20, health.health);
     }
 
     [UnityTest]
@@ -32,7 +32,7 @@ public class UnitTests
     {
         var gameObject = new GameObject();
         var health = gameObject.AddComponent<Health>();
-        health.TakeDamage(100);
+        health.TakeDamage(health.maxHealth);
         yield return null;
         Assert.That(gameObject == null);
     }
@@ -44,7 +44,7 @@ public class UnitTests
         var gameObject = new GameObject();
         gameObject.tag = "Player";
         var health = gameObject.AddComponent<Health>();
-        health.TakeDamage(100);
+        health.TakeDamage(health.maxHealth);
         yield return null;
         Assert.AreEqual("Menu", SceneManager.GetActiveScene().name);
     }
@@ -67,7 +67,7 @@ public class UnitTests
         var health = gameObject.AddComponent<Health>();
         health.HealPlayer(20);
         yield return null;
-        Assert.AreEqual(100, health.health);
+        Assert.AreEqual(health.maxHealth, health.health);
     }
 
     [UnityTest]
@@ -77,8 +77,7 @@ public class UnitTests
         var menu = gameObject.AddComponent<Mainmenu>();
         menu.PlayGame();
         yield return null;
-        Assert.AreEqual("1", SceneManager.GetActiveScene().name);
-        SceneManager.LoadScene(1);
+        Assert.That(SceneManager.GetActiveScene().name != "Menu");
     }
 
     [UnityTest]
@@ -145,7 +144,57 @@ public class UnitTests
         var objForCollision = CreateGameObjectWithCollider(false);
         bullet.transform.position = new Vector2(0, 0);
         objForCollision.transform.position = new Vector2(0, 0);
-        yield return null;
+        yield return new WaitForSeconds(0.25f);
         Assert.That(bullet == null);
+    }
+
+    [UnityTest]
+    public IEnumerator FlyDamageWhenTrigger()
+    {
+        var bullet = CreateGameObjectWithCollider(true);
+        bullet.AddComponent<Fly>();
+        var damage = bullet.GetComponent<Fly>().damage;
+        var objForCollision = CreateGameObjectWithCollider(false);
+        objForCollision.AddComponent<Health>();
+        bullet.transform.position = new Vector2(0, 0);
+        objForCollision.transform.position = new Vector2(0, 0);
+        Debug.Log(bullet.transform.position);
+        yield return null;
+        Assert.AreEqual(objForCollision.GetComponent<Health>().maxHealth - damage,
+            objForCollision.GetComponent<Health>().health);
+    }
+
+    [UnityTest]
+    public IEnumerator HealIncreaseHealthWhenTrigger()
+    {
+        var bottle = CreateGameObjectWithCollider(true);
+        bottle.AddComponent<Heal>();
+        bottle.transform.position = new Vector2(324, 0);
+        var objForCollision = CreateGameObjectWithCollider(false);
+        objForCollision.tag = "Player";
+        objForCollision.AddComponent<Health>();
+        var health = objForCollision.GetComponent<Health>();
+        health.health = health.maxHealth / 2;
+        bottle.GetComponent<Heal>().increasedHealth = health.health;
+        bottle.transform.position = new Vector2(0, 0);
+        objForCollision.transform.position = new Vector2(0, 0);
+        Debug.Log(bottle.transform.position);
+        yield return new WaitForSeconds(0.25f);
+        Assert.AreEqual(health.maxHealth, health.health);
+    }
+
+    [UnityTest]
+    public IEnumerator HealDestroyAfterTrigger()
+    {
+        var bottle = CreateGameObjectWithCollider(true);
+        bottle.AddComponent<Heal>();
+        var objForCollision = CreateGameObjectWithCollider(false);
+        objForCollision.tag = "Player";
+        objForCollision.AddComponent<Health>();
+        bottle.transform.position = new Vector2(0, 0);
+        objForCollision.transform.position = new Vector2(0, 0);
+        Debug.Log(bottle.transform.position);
+        yield return new WaitForSeconds(0.25f);
+        Assert.That(bottle == null);
     }
 }
