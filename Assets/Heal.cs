@@ -4,13 +4,14 @@ using UnityEngine;
 
 public class Heal : MonoBehaviour
 {
+    public float increasedHealth = 30;
     void OnTriggerEnter2D(Collider2D hitInfo)
     {
         if (hitInfo.gameObject.CompareTag("Player"))
         {
             var playerHealth = hitInfo.GetComponent<Health>();
-            playerHealth.HealPlayer(30);
+            playerHealth.HealPlayer(increasedHealth);
+            Destroy(gameObject);
         }
-        Destroy(gameObject);
     }
 }

@@ -9,7 +9,7 @@ public class Spawn : MonoBehaviour
 
     public void Start()
     {
-        spawnPosition = GameObject.FindGameObjectWithTag("DropPosition").transform;
+        spawnPosition = GameObject.FindGameObjectWithTag("DropPosition")?.transform;
     }
 
     public void SpawnDroppedItem()
