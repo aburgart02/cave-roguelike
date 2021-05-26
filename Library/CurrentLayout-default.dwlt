@@ -19,9 +19,9 @@ MonoBehaviour:
     width: 1920
     height: 997
   m_ShowMode: 4
-  m_Title: Scene
+  m_Title: Project
   m_RootView: {fileID: 7}
-  m_MinSize: {x: 875, y: 300}
+  m_MinSize: {x: 875, y: 542}
   m_MaxSize: {x: 10000, y: 10000}
   m_Maximized: 1
 --- !u!114 &2
@@ -39,16 +39,16 @@ MonoBehaviour:
   m_Children: []
   m_Position:
     serializedVersion: 2
-    x: 409
+    x: 319
     y: 0
-    width: 1235
+    width: 975
     height: 676
   m_MinSize: {x: 202, y: 221}
   m_MaxSize: {x: 4002, y: 4021}
-  m_ActualView: {fileID: 15}
+  m_ActualView: {fileID: 16}
   m_Panes:
-  - {fileID: 15}
   - {fileID: 16}
+  - {fileID: 17}
   m_Selected: 0
   m_LastSelected: 1
 --- !u!114 &3
@@ -72,10 +72,10 @@ MonoBehaviour:
     y: 30
     width: 1920
     height: 947
-  m_MinSize: {x: 678, y: 492}
-  m_MaxSize: {x: 14001, y: 14042}
+  m_MinSize: {x: 504, y: 492}
+  m_MaxSize: {x: 14002, y: 14042}
   vertical: 0
-  controlID: 149
+  controlID: 81
 --- !u!114 &4
 MonoBehaviour:
   m_ObjectHideFlags: 52
@@ -86,21 +86,22 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 1
   m_Script: {fileID: 12006, guid: 0000000000000000e000000000000000, type: 0}
-  m_Name: 
+  m_Name: TestRunnerWindow
   m_EditorClassIdentifier: 
   m_Children: []
   m_Position:
     serializedVersion: 2
-    x: 1644
+    x: 1294
     y: 0
-    width: 276
+    width: 626
     height: 947
-  m_MinSize: {x: 275, y: 50}
-  m_MaxSize: {x: 4000, y: 4000}
-  m_ActualView: {fileID: 13}
+  m_MinSize: {x: 101, y: 121}
+  m_MaxSize: {x: 4001, y: 4021}
+  m_ActualView: {fileID: 12}
   m_Panes:
-  - {fileID: 13}
-  m_Selected: 0
+  - {fileID: 14}
+  - {fileID: 12}
+  m_Selected: 1
   m_LastSelected: 0
 --- !u!114 &5
 MonoBehaviour:
@@ -119,13 +120,13 @@ MonoBehaviour:
     serializedVersion: 2
     x: 0
     y: 0
-    width: 409
+    width: 319
     height: 676
-  m_MinSize: {x: 201, y: 221}
-  m_MaxSize: {x: 4001, y: 4021}
-  m_ActualView: {fileID: 14}
+  m_MinSize: {x: 200, y: 200}
+  m_MaxSize: {x: 4000, y: 4000}
+  m_ActualView: {fileID: 15}
   m_Panes:
-  - {fileID: 14}
+  - {fileID: 15}
   m_Selected: 0
   m_LastSelected: 0
 --- !u!114 &6
@@ -145,14 +146,14 @@ MonoBehaviour:
     serializedVersion: 2
     x: 0
     y: 676
-    width: 1644
+    width: 1294
     height: 271
   m_MinSize: {x: 231, y: 271}
   m_MaxSize: {x: 10001, y: 10021}
-  m_ActualView: {fileID: 12}
+  m_ActualView: {fileID: 13}
   m_Panes:
-  - {fileID: 12}
-  - {fileID: 17}
+  - {fileID: 13}
+  - {fileID: 18}
   m_Selected: 0
   m_LastSelected: 1
 --- !u!114 &7
@@ -205,8 +206,8 @@ MonoBehaviour:
   m_MinSize: {x: 0, y: 0}
   m_MaxSize: {x: 0, y: 0}
   m_LoadedToolbars:
-  - {fileID: 18}
-  m_MainToolbar: {fileID: 18}
+  - {fileID: 19}
+  m_MainToolbar: {fileID: 19}
   m_LastLoadedLayoutName: 
 --- !u!114 &9
 MonoBehaviour:
@@ -248,12 +249,12 @@ MonoBehaviour:
     serializedVersion: 2
     x: 0
     y: 0
-    width: 1644
+    width: 1294
     height: 947
   m_MinSize: {x: 403, y: 492}
   m_MaxSize: {x: 10001, y: 14042}
   vertical: 1
-  controlID: 84
+  controlID: 136
 --- !u!114 &11
 MonoBehaviour:
   m_ObjectHideFlags: 52
@@ -273,13 +274,369 @@ MonoBehaviour:
     serializedVersion: 2
     x: 0
     y: 0
-    width: 1644
+    width: 1294
     height: 676
   m_MinSize: {x: 403, y: 221}
   m_MaxSize: {x: 8003, y: 4021}
   vertical: 0
-  controlID: 85
+  controlID: 137
 --- !u!114 &12
+MonoBehaviour:
+  m_ObjectHideFlags: 52
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 13401, guid: 0000000000000000e000000000000000, type: 0}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_MinSize: {x: 100, y: 100}
+  m_MaxSize: {x: 4000, y: 4000}
+  m_TitleContent:
+    m_Text: Test Runner
+    m_Image: {fileID: 0}
+    m_Tooltip: 
+  m_Pos:
+    serializedVersion: 2
+    x: 1294
+    y: 73
+    width: 625
+    height: 926
+  m_ViewDataDictionary: {fileID: 0}
+  m_Spl:
+    ID: 3647
+    splitterInitialOffset: 0
+    currentActiveSplitter: -1
+    realSizes:
+    - 642
+    - 214
+    relativeSizes:
+    - 0.75
+    - 0.25
+    minSizes:
+    - 32
+    - 32
+    maxSizes:
+    - 0
+    - 0
+    lastTotalSize: 856
+    splitSize: 6
+    xOffset: 0
+    m_Version: 1
+    oldRealSizes: 
+    oldMinSizes: 
+    oldMaxSizes: 
+    oldSplitSize: 0
+  m_TestTypeToolbarIndex: 0
+  m_PlayModeTestListGUI:
+    m_Window: {fileID: 12}
+    m_NewResultList:
+    - id: 1006
+      uniqueId: '[Roguelike][suite]'
+      name: Roguelike
+      fullName: Roguelike
+      resultStatus: 2
+      duration: 1.7725149
+      messages: One or more child tests had errors
+      output: 
+      stacktrace: 
+      notRunnable: 0
+      ignoredOrSkipped: 0
+      description: 
+      isSuite: 1
+      categories: []
+      parentId: 
+      parentUniqueId: 
+    - id: 1010
+      uniqueId: "[Tests][C:/Users/\u0410\u0440\u0442\u0451\u043C/Desktop/Roguelike-in-cave/Library/ScriptAssemblies/Tests.dll][suite]"
+      name: Tests.dll
+      fullName: "C:/Users/\u0410\u0440\u0442\u0451\u043C/Desktop/Roguelike-in-cave/Library/ScriptAssemblies/Tests.dll"
+      resultStatus: 2
+      duration: 1.7198344
+      messages: One or more child tests had errors
+      output: 
+      stacktrace: 
+      notRunnable: 0
+      ignoredOrSkipped: 0
+      description: 
+      isSuite: 1
+      categories: []
+      parentId: 1006
+      parentUniqueId: '[Roguelike][suite]'
+    - id: 1007
+      uniqueId: Tests.dll/[Tests][UnitTests][suite]
+      name: UnitTests
+      fullName: UnitTests
+      resultStatus: 2
+      duration: 1.7133255
+      messages: One or more child tests had errors
+      output: 
+      stacktrace: 
+      notRunnable: 0
+      ignoredOrSkipped: 0
+      description: 
+      isSuite: 1
+      categories: []
+      parentId: 1010
+      parentUniqueId: "[Tests][C:/Users/\u0410\u0440\u0442\u0451\u043C/Desktop/Roguelike-in-cave/Library/ScriptAssemblies/Tests.dll][suite]"
+    - id: 1009
+      uniqueId: Tests.dll/UnitTests/[Tests][UnitTests.FireBulletSpawnAtFirePosition]
+      name: FireBulletSpawnAtFirePosition
+      fullName: UnitTests.FireBulletSpawnAtFirePosition
+      resultStatus: 1
+      duration: 0.0379713
+      messages: 
+      output: 
+      stacktrace: 
+      notRunnable: 0
+      ignoredOrSkipped: 0
+      description: 
+      isSuite: 0
+      categories:
+      - Uncategorized
+      parentId: 1001
+      parentUniqueId: Tests.dll/[Tests][UnitTests][suite]
+    - id: 1008
+      uniqueId: Tests.dll/UnitTests/[Tests][UnitTests.FireShootBulletCreation]
+      name: FireShootBulletCreation
+      fullName: UnitTests.FireShootBulletCreation
+      resultStatus: 1
+      duration: 0.0159193
+      messages: 
+      output: 
+      stacktrace: 
+      notRunnable: 0
+      ignoredOrSkipped: 0
+      description: 
+      isSuite: 0
+      categories:
+      - Uncategorized
+      parentId: 1001
+      parentUniqueId: Tests.dll/[Tests][UnitTests][suite]
+    - id: 1006
+      uniqueId: Tests.dll/UnitTests/[Tests][UnitTests.HealPlayerWhenHealthIsGreaterThanMaxHealth]
+      name: HealPlayerWhenHealthIsGreaterThanMaxHealth
+      fullName: UnitTests.HealPlayerWhenHealthIsGreaterThanMaxHealth
+      resultStatus: 1
+      duration: 0.0117044
+      messages: 
+      output: 
+      stacktrace: 
+      notRunnable: 0
+      ignoredOrSkipped: 0
+      description: 
+      isSuite: 0
+      categories:
+      - Uncategorized
+      parentId: 1001
+      parentUniqueId: Tests.dll/[Tests][UnitTests][suite]
+    - id: 1005
+      uniqueId: Tests.dll/UnitTests/[Tests][UnitTests.HealPlayerWhenHealthIsLessThanMaxHealth]
+      name: HealPlayerWhenHealthIsLessThanMaxHealth
+      fullName: UnitTests.HealPlayerWhenHealthIsLessThanMaxHealth
+      resultStatus: 1
+      duration: 0.0075998
+      messages: 
+      output: 
+      stacktrace: 
+      notRunnable: 0
+      ignoredOrSkipped: 0
+      description: 
+      isSuite: 0
+      categories:
+      - Uncategorized
+      parentId: 1001
+      parentUniqueId: Tests.dll/[Tests][UnitTests][suite]
+    - id: 1003
+      uniqueId: Tests.dll/UnitTests/[Tests][UnitTests.HealthIsZeroNotPlayer]
+      name: HealthIsZeroNotPlayer
+      fullName: UnitTests.HealthIsZeroNotPlayer
+      resultStatus: 1
+      duration: 0.0077614
+      messages: 
+      output: 
+      stacktrace: 
+      notRunnable: 0
+      ignoredOrSkipped: 0
+      description: 
+      isSuite: 0
+      categories:
+      - Uncategorized
+      parentId: 1001
+      parentUniqueId: Tests.dll/[Tests][UnitTests][suite]
+    - id: 1004
+      uniqueId: Tests.dll/UnitTests/[Tests][UnitTests.HealthIsZeroPlayer]
+      name: HealthIsZeroPlayer
+      fullName: UnitTests.HealthIsZeroPlayer
+      resultStatus: 1
+      duration: 0.1038184
+      messages: 
+      output: 
+      stacktrace: 
+      notRunnable: 0
+      ignoredOrSkipped: 0
+      description: 
+      isSuite: 0
+      categories:
+      - Uncategorized
+      parentId: 1001
+      parentUniqueId: Tests.dll/[Tests][UnitTests][suite]
+    - id: 1008
+      uniqueId: Tests.dll/UnitTests/[Tests][UnitTests.HealthTakeDamage]
+      name: HealthTakeDamage
+      fullName: UnitTests.HealthTakeDamage
+      resultStatus: 1
+      duration: 0.112136
+      messages: 
+      output: 
+      stacktrace: 
+      notRunnable: 0
+      ignoredOrSkipped: 0
+      description: 
+      isSuite: 0
+      categories:
+      - Uncategorized
+      parentId: 1007
+      parentUniqueId: Tests.dll/[Tests][UnitTests][suite]
+    - id: 1008
+      uniqueId: Tests.dll/UnitTests/[Tests][UnitTests.MainMenuLoadGame]
+      name: MainMenuLoadGame
+      fullName: UnitTests.MainMenuLoadGame
+      resultStatus: 1
+      duration: 1.2498924
+      messages: 
+      output: 'Path found: 6 ms
+
+        Path found: 0 ms
+
+'
+      stacktrace: 
+      notRunnable: 0
+      ignoredOrSkipped: 0
+      description: 
+      isSuite: 0
+      categories:
+      - Uncategorized
+      parentId: 1001
+      parentUniqueId: Tests.dll/[Tests][UnitTests][suite]
+    - id: 1010
+      uniqueId: Tests.dll/UnitTests/[Tests][UnitTests.newTest]
+      name: newTest
+      fullName: UnitTests.newTest
+      resultStatus: 2
+      duration: 0.1438084
+      messages: 'System.ArgumentException : The Object you want to instantiate is
+        null.'
+      output: 
+      stacktrace: "  at UnityEngine.Object.Instantiate[T] (T original) [0x0003d]
+        in <9baebf9af86541678fd15bfdbf5f26eb>:0 \r\n  at UnitTests+<newTest>d__8.MoveNext
+        () [0x00017] in C:\\Users\\\u0410\u0440\u0442\u0451\u043C\\Desktop\\Roguelike-in-cave\\Assets\\Tests\\UnitTests.cs:101
+        \r\n  at UnityEngine.TestTools.TestEnumerator+<Execute>d__6.MoveNext () [0x00038]
+        in C:\\Users\\\u0410\u0440\u0442\u0451\u043C\\Desktop\\Roguelike-in-cave\\Library\\PackageCache\\com.unity.test-framework@1.1.24\\UnityEngine.TestRunner\\NUnitExtensions\\Attributes\\TestEnumerator.cs:36 "
+      notRunnable: 0
+      ignoredOrSkipped: 0
+      description: 
+      isSuite: 0
+      categories:
+      - Uncategorized
+      parentId: 1001
+      parentUniqueId: Tests.dll/[Tests][UnitTests][suite]
+    m_ResultText: "newTest (0,144s)\n---\nSystem.ArgumentException : The Object you
+      want to instantiate is null.\n---\nat UnityEngine.Object.Instantiate[T] (T
+      original) [0x0003d] in <9baebf9af86541678fd15bfdbf5f26eb>:0 \r\n  at UnitTests+<newTest>d__8.MoveNext
+      () [0x00017] in C:\\Users\\\u0410\u0440\u0442\u0451\u043C\\Desktop\\Roguelike-in-cave\\Assets\\Tests\\UnitTests.cs:101
+      \r\n  at UnityEngine.TestTools.TestEnumerator+<Execute>d__6.MoveNext () [0x00038]
+      in C:\\Users\\\u0410\u0440\u0442\u0451\u043C\\Desktop\\Roguelike-in-cave\\Library\\PackageCache\\com.unity.test-framework@1.1.24\\UnityEngine.TestRunner\\NUnitExtensions\\Attributes\\TestEnumerator.cs:36"
+    m_ResultStacktrace: "  at UnityEngine.Object.Instantiate[T] (T original) [0x0003d]
+      in <9baebf9af86541678fd15bfdbf5f26eb>:0 \r\n  at UnitTests+<newTest>d__8.MoveNext
+      () [0x00017] in C:\\Users\\\u0410\u0440\u0442\u0451\u043C\\Desktop\\Roguelike-in-cave\\Assets\\Tests\\UnitTests.cs:101
+      \r\n  at UnityEngine.TestTools.TestEnumerator+<Execute>d__6.MoveNext () [0x00038]
+      in C:\\Users\\\u0410\u0440\u0442\u0451\u043C\\Desktop\\Roguelike-in-cave\\Library\\PackageCache\\com.unity.test-framework@1.1.24\\UnityEngine.TestRunner\\NUnitExtensions\\Attributes\\TestEnumerator.cs:36 "
+    m_TestListState:
+      scrollPos: {x: 0, y: 0}
+      m_SelectedIDs: 4e4bb2b7
+      m_LastClickedID: -1213052082
+      m_ExpandedIDs: 3cd8229ab7d1a6fddaad6318ffffff7f
+      m_RenameOverlay:
+        m_UserAcceptedRename: 0
+        m_Name: 
+        m_OriginalName: 
+        m_EditFieldRect:
+          serializedVersion: 2
+          x: 0
+          y: 0
+          width: 0
+          height: 0
+        m_UserData: 0
+        m_IsWaitingForDelay: 0
+        m_IsRenaming: 0
+        m_OriginalEventType: 11
+        m_IsRenamingFilename: 0
+        m_ClientGUIView: {fileID: 0}
+      m_SearchString: 
+    m_TestRunnerUIFilter:
+      PassedHidden: 0
+      FailedHidden: 0
+      NotRunHidden: 0
+      m_SearchString: 
+      selectedCategoryMask: 0
+      availableCategories:
+      - Uncategorized
+    m_SelectedOption: 0
+  m_EditModeTestListGUI:
+    m_Window: {fileID: 12}
+    m_NewResultList:
+    - id: 1012
+      uniqueId: '[Roguelike][suite]'
+      name: Roguelike
+      fullName: Roguelike
+      resultStatus: 0
+      duration: 0
+      messages: 
+      output: 
+      stacktrace: 
+      notRunnable: 0
+      ignoredOrSkipped: 0
+      description: 
+      isSuite: 1
+      categories: []
+      parentId: 
+      parentUniqueId: 
+    m_ResultText: 
+    m_ResultStacktrace: 
+    m_TestListState:
+      scrollPos: {x: 0, y: 0}
+      m_SelectedIDs: 
+      m_LastClickedID: 0
+      m_ExpandedIDs: b7d1a6fdffffff7f
+      m_RenameOverlay:
+        m_UserAcceptedRename: 0
+        m_Name: 
+        m_OriginalName: 
+        m_EditFieldRect:
+          serializedVersion: 2
+          x: 0
+          y: 0
+          width: 0
+          height: 0
+        m_UserData: 0
+        m_IsWaitingForDelay: 0
+        m_IsRenaming: 0
+        m_OriginalEventType: 11
+        m_IsRenamingFilename: 0
+        m_ClientGUIView: {fileID: 0}
+      m_SearchString: 
+    m_TestRunnerUIFilter:
+      PassedHidden: 0
+      FailedHidden: 0
+      NotRunHidden: 0
+      m_SearchString: 
+      selectedCategoryMask: 0
+      availableCategories:
+      - Uncategorized
+--- !u!114 &13
 MonoBehaviour:
   m_ObjectHideFlags: 52
   m_CorrespondingSourceObject: {fileID: 0}
@@ -301,7 +658,7 @@ MonoBehaviour:
     serializedVersion: 2
     x: 0
     y: 749
-    width: 1643
+    width: 1293
     height: 250
   m_ViewDataDictionary: {fileID: 0}
   m_SearchFilter:
@@ -317,22 +674,22 @@ MonoBehaviour:
     m_SkipHidden: 0
     m_SearchArea: 1
     m_Folders:
-    - Assets/Scenes
+    - Assets
     m_Globs: []
     m_OriginalText: 
   m_ViewMode: 1
   m_StartGridSize: 71
   m_LastFolders:
-  - Assets/Scenes
+  - Assets
   m_LastFoldersGridSize: 71
   m_LastProjectPath: "C:\\Users\\\u0410\u0440\u0442\u0451\u043C\\Desktop\\Roguelike-in-cave"
   m_LockTracker:
     m_IsLocked: 0
   m_FolderTreeState:
     scrollPos: {x: 0, y: 0}
-    m_SelectedIDs: 58550000
-    m_LastClickedID: 21848
-    m_ExpandedIDs: 00000000d0530000d2530000d4530000d6530000d8530000da530000dc530000de530000e0530000e2530000e4530000e6530000e8530000ea530000646000007063000000ca9a3bffffff7f
+    m_SelectedIDs: ce530000
+    m_LastClickedID: 21454
+    m_ExpandedIDs: 00000000ce530000d0530000d2530000d4530000d6530000d8530000da530000dc530000de530000e0530000e2530000e4530000e6530000e85300001254000000ca9a3b
     m_RenameOverlay:
       m_UserAcceptedRename: 0
       m_Name: 
@@ -360,7 +717,7 @@ MonoBehaviour:
     scrollPos: {x: 0, y: 0}
     m_SelectedIDs: 
     m_LastClickedID: 0
-    m_ExpandedIDs: 00000000d0530000d2530000d4530000d6530000d8530000da530000dc530000de530000e0530000e2530000e4530000e6530000e8530000ea530000
+    m_ExpandedIDs: 00000000ce530000d0530000d2530000d4530000d6530000d8530000da530000dc530000de530000e0530000e2530000e4530000e6530000e8530000
     m_RenameOverlay:
       m_UserAcceptedRename: 0
       m_Name: 
@@ -404,7 +761,7 @@ MonoBehaviour:
       m_IsRenaming: 0
       m_OriginalEventType: 11
       m_IsRenamingFilename: 1
-      m_ClientGUIView: {fileID: 6}
+      m_ClientGUIView: {fileID: 0}
     m_CreateAssetUtility:
       m_EndAction: {fileID: 0}
       m_InstanceID: 0
@@ -416,7 +773,7 @@ MonoBehaviour:
     m_GridSize: 71
   m_SkipHiddenPackages: 0
   m_DirectoriesAreaWidth: 207
---- !u!114 &13
+--- !u!114 &14
 MonoBehaviour:
   m_ObjectHideFlags: 52
   m_CorrespondingSourceObject: {fileID: 0}
@@ -436,9 +793,9 @@ MonoBehaviour:
     m_Tooltip: 
   m_Pos:
     serializedVersion: 2
-    x: 1644
+    x: 1294
     y: 73
-    width: 275
+    width: 625
     height: 926
   m_ViewDataDictionary: {fileID: 0}
   m_ObjectsLockedBeforeSerialization: []
@@ -453,7 +810,7 @@ MonoBehaviour:
   m_LockTracker:
     m_IsLocked: 0
   m_PreviewWindow: {fileID: 0}
---- !u!114 &14
+--- !u!114 &15
 MonoBehaviour:
   m_ObjectHideFlags: 52
   m_CorrespondingSourceObject: {fileID: 0}
@@ -475,7 +832,7 @@ MonoBehaviour:
     serializedVersion: 2
     x: 0
     y: 73
-    width: 408
+    width: 318
     height: 655
   m_ViewDataDictionary: {fileID: 0}
   m_SceneHierarchy:
@@ -483,21 +840,21 @@ MonoBehaviour:
       scrollPos: {x: 0, y: 0}
       m_SelectedIDs: 
       m_LastClickedID: 0
-      m_ExpandedIDs: d4d9fcffcedefcffd4dffcff42e0fcff5ee1fcffb2f6fcffb8f7fcff1a16fdff8621fdff6cf1ffffaef1ffff0cfbffff6e7100008c710000be710000c2710000ce710000ec7100000272000048720000627200008672000040fd000046fd0000160a01001c0a0100300a0100
+      m_ExpandedIDs: d005feff3e06feff4809feff2e0bfeff9c0bfeff9e0efeff2c10feff9a10feff9c13feff3c15feffaa15feffb418feff2c1afeff9a1afeffb01dfeffb01ffeff1e20feff2823feff4c26feffb226feff6429feff9e30feffe633feff4c34feff1c35feff8a35feffc040feff2e41feff2844feff6c45feffda45feffdc48feffb84ffeff2650feff3253feffae8cfeff1c8dfeff3090feff6692feffd492feff5093feff9c94feff0a95feff2698feff1c9afeff8a9afeff009bfefff29dfeff609efeff5aa1feff7ea4feffeca4feffeea7fefffaa9feff68aafeffdeaafeffeaacfeff58adfeff38b0feffd8b2feff46b3feff26b6feffccb9feff3abafeff70bcfeff98befeff06bffeff34c1feff42c3feffb0c3feffdec5feffdec8feff4cc9feff7acbfefffecdfeff6ccefeff96d0feff9ed6feff0cd7feff28d9feffb6ddfeff24defeff40e0feff3ee2fefface2feffc8e4feffe6e5feff54e6feff70e8feff86e9fefff4e9feff10ecfeff30edfeff9eedfeffbaeffeffc2f1feff30f2feff4cf4feff5cf5feffcaf5feffe6f7feff0cfafeff7afafeff96fcfeffa6fdfeff14fefeff3000ffff4001ffffae01ffffca03ffff0008ffff6e08ffff9a0affff9a0cffff080dffff340fffff2611ffff9411ffff2e13ffff8614fffff414ffff2017ffff5019ffffbe19ffffe81bffff6a1effffd81effff4e1fffffbe21ffff2c22ffff4824ffff9825ffff0626ffff2a28ffff6231ffffd031ffffa033ffffa035ffff0e36ffff2a38ffff403affffae3affffd23cffff223effff903effffb440ffffb242ffff2043ffff2045ffff7047ffffde47ffff024affff3a4bffffa84bffffcc4dffff1c4fffff8a4fffffa651ffffba53ffff2854ffff4656ffff5c58ffffca58ffffe65affffb85dffff265effff4260ffff9862ffff0663ffff1465ffff2e68ffff9c68ffffbe6affff486dffffb66dffffc26fffff4472ffffb272ffff5274ffff6a76ffffd876ffff7478ffffc27bffff307cffffcc7dffff0e82ffff7c82ffff1484ffff3685ffffa485ffff4487ffff5689ffffc489ffff648bffff668dffffd48dffff708fffffa292ffff1093ffffa894ffffea96ffff5897fffff098ffff0a9bffff789bffff109dffff4a9fffffb89fffff50a1ffff4aa3ffffb8a3ffff50a5ffff7ca7ffffeaa7ffff60a8ffffe8a9ffff56aaffffeeabffffb2adffff20aeffffc0afffff20b2ffff8eb2ffff2eb4ffff90b6fffffeb6ffff98b8ffffaab9ffff18baffffb8bbffffa0beffff0ebfffffaec0ffff46c2ffffb4c2ffff54c4ffff64c6ffffd2c6ffff72c8ffffa4caffff12cbffffb2ccffff8af6ffffaaf6ffffd2f7fffff6f8ffff3afbffff2c570000f45700000e7c0000d67c0000a8a8000088ed0000bced000084ee000054170100
       m_RenameOverlay:
         m_UserAcceptedRename: 0
-        m_Name: 
-        m_OriginalName: 
+        m_Name: Canvas
+        m_OriginalName: Canvas
         m_EditFieldRect:
           serializedVersion: 2
           x: 0
           y: 0
           width: 0
           height: 0
-        m_UserData: 0
+        m_UserData: 71508
         m_IsWaitingForDelay: 0
         m_IsRenaming: 0
-        m_OriginalEventType: 11
+        m_OriginalEventType: 0
         m_IsRenamingFilename: 0
         m_ClientGUIView: {fileID: 5}
       m_SearchString: 
@@ -507,7 +864,7 @@ MonoBehaviour:
       m_IsLocked: 0
     m_CurrentSortingName: TransformSorting
   m_WindowGUID: 4c969a2b90040154d917609493e03593
---- !u!114 &15
+--- !u!114 &16
 MonoBehaviour:
   m_ObjectHideFlags: 52
   m_CorrespondingSourceObject: {fileID: 0}
@@ -527,9 +884,9 @@ MonoBehaviour:
     m_Tooltip: 
   m_Pos:
     serializedVersion: 2
-    x: 409
+    x: 319
     y: 73
-    width: 1233
+    width: 973
     height: 655
   m_ViewDataDictionary: {fileID: 0}
   m_ShowContextualTools: 0
@@ -543,9 +900,9 @@ MonoBehaviour:
   m_PlayAudio: 0
   m_AudioPlay: 0
   m_Position:
-    m_Target: {x: -1.4001353, y: 0.98250765, z: -1611.3226}
+    m_Target: {x: 429.13898, y: 356.1635, z: -706.01355}
     speed: 2
-    m_Value: {x: -1.619708, y: 1.0002371, z: -1611.301}
+    m_Value: {x: 420.68756, y: 343.12607, z: -703.9433}
   m_RenderMode: 0
   m_CameraMode:
     drawMode: 0
@@ -596,9 +953,9 @@ MonoBehaviour:
     speed: 2
     m_Value: {x: 0, y: 0, z: 0, w: 1}
   m_Size:
-    m_Target: 5.0039587
+    m_Target: 480.76163
     speed: 2
-    m_Value: 4.7884774
+    m_Value: 460.05896
   m_Ortho:
     m_Target: 1
     speed: 2
@@ -623,7 +980,7 @@ MonoBehaviour:
   m_SceneVisActive: 1
   m_LastLockedObject: {fileID: 0}
   m_ViewIsLockedToObject: 0
---- !u!114 &16
+--- !u!114 &17
 MonoBehaviour:
   m_ObjectHideFlags: 52
   m_CorrespondingSourceObject: {fileID: 0}
@@ -643,9 +1000,9 @@ MonoBehaviour:
     m_Tooltip: 
   m_Pos:
     serializedVersion: 2
-    x: 409
+    x: 319
     y: 73
-    width: 1233
+    width: 973
     height: 655
   m_ViewDataDictionary: {fileID: 0}
   m_SerializedViewNames: []
@@ -654,7 +1011,7 @@ MonoBehaviour:
   m_ShowGizmos: 0
   m_TargetDisplay: 0
   m_ClearColor: {r: 0, g: 0, b: 0, a: 0}
-  m_TargetSize: {x: 1233, y: 634}
+  m_TargetSize: {x: 973, y: 634}
   m_TextureFilterMode: 0
   m_TextureHideFlags: 61
   m_RenderIMGUI: 1
@@ -669,8 +1026,8 @@ MonoBehaviour:
     m_VRangeLocked: 0
     hZoomLockedByDefault: 0
     vZoomLockedByDefault: 0
-    m_HBaseRangeMin: -616.5
-    m_HBaseRangeMax: 616.5
+    m_HBaseRangeMin: -486.5
+    m_HBaseRangeMax: 486.5
     m_VBaseRangeMin: -317
     m_VBaseRangeMax: 317
     m_HAllowExceedBaseRangeMin: 1
@@ -690,29 +1047,29 @@ MonoBehaviour:
       serializedVersion: 2
       x: 0
       y: 21
-      width: 1233
+      width: 973
       height: 634
     m_Scale: {x: 1, y: 1}
-    m_Translation: {x: 616.5, y: 317}
+    m_Translation: {x: 486.5, y: 317}
     m_MarginLeft: 0
     m_MarginRight: 0
     m_MarginTop: 0
     m_MarginBottom: 0
     m_LastShownAreaInsideMargins:
       serializedVersion: 2
-      x: -616.5
+      x: -486.5
       y: -317
-      width: 1233
+      width: 973
       height: 634
     m_MinimalGUI: 1
   m_defaultScale: 1
-  m_LastWindowPixelSize: {x: 1233, y: 655}
+  m_LastWindowPixelSize: {x: 973, y: 655}
   m_ClearInEditMode: 1
   m_NoCameraWarning: 1
   m_LowResolutionForAspectRatios: 01000000000000000000
   m_XRRenderMode: 0
   m_RenderTexture: {fileID: 0}
---- !u!114 &17
+--- !u!114 &18
 MonoBehaviour:
   m_ObjectHideFlags: 52
   m_CorrespondingSourceObject: {fileID: 0}
@@ -734,10 +1091,10 @@ MonoBehaviour:
     serializedVersion: 2
     x: 0
     y: 749
-    width: 1643
+    width: 1293
     height: 250
   m_ViewDataDictionary: {fileID: 0}
---- !u!114 &18
+--- !u!114 &19
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}

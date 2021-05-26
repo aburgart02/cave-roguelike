@@ -478,7 +478,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   Fireposition: {fileID: 391327096}
-  arrow: {fileID: 2515986222758999616, guid: fdff44a6731d0d345a4b0e4707788d66, type: 3}
+  bullet: {fileID: 2515986222758999616, guid: fdff44a6731d0d345a4b0e4707788d66, type: 3}
   maxBullets: 1
   bullets: []
   Shot: {fileID: 270671836}
@@ -538,8 +538,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 0c1525e68cd1c4848b330ee3e547db8a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  maxHealth: 10000
-  health: 10000
+  maxHealth: 100
+  health: 100
   healthBar: {fileID: 270671838}
   DeathAnimation: {fileID: 0}
   item: {fileID: 0}
