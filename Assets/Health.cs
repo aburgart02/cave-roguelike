@@ -31,7 +31,6 @@ public class Health : MonoBehaviour
                 var value = Random.Range(0,10);
                 if (value < 5)
                 {
-                    //spawnPosition = GameObject.FindGameObjectWithTag("DropPosition").transform;
                     Instantiate(item, spawnPosition.position, Quaternion.identity);
                 }
                 Die();
@@ -42,6 +41,8 @@ public class Health : MonoBehaviour
     public void HealPlayer(int heal)
     {
         health += heal;
+        if (health > maxHealth)
+            health = maxHealth;
         if (healthBar != null)
         {
             healthBar.SetHealth();
@@ -50,7 +51,8 @@ public class Health : MonoBehaviour
 
     public void Die()
     {
-        Instantiate(DeathAnimation, gameObject.transform.position, gameObject.transform.rotation);
+        if (DeathAnimation != null)
+            Instantiate(DeathAnimation, gameObject.transform.position, gameObject.transform.rotation);
         Destroy(gameObject);
     }
 }

@@ -16,6 +16,7 @@ TagManager:
   - RedKey
   - GreyKey
   - Mouse
+  - Bullet
   layers:
   - Default
   - TransparentFX
