@@ -8,7 +8,7 @@ public class PeriodShoot : MonoBehaviour
     public int Period;
     public Transform firePoint;
     public GameObject bullet;
-    [SerializeField] private AudioSource Shot;
+    [SerializeField] public AudioSource Shot;
 
     void Update()
     {
@@ -19,9 +19,10 @@ public class PeriodShoot : MonoBehaviour
 
     }
 
-    void Shoot()
+    public void Shoot()
     {
-        Shot.Play();
+        if (Shot!=null)
+            Shot.Play();
         Instantiate(bullet, firePoint.position, firePoint.rotation);
     }
 }

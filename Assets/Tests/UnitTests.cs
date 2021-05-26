@@ -96,10 +96,31 @@ public class UnitTests
     }
 
     [UnityTest]
-    public IEnumerator newTest()
+    public IEnumerator SpawnItem()
     {
-        var gameObject = MonoBehaviour.Instantiate<GameObject>(Resources.Load<GameObject>("Assets/Player.prefab"));
+        var gameObject = new GameObject();
+        var spawn = gameObject.AddComponent<Spawn>();
+        spawn.item = new GameObject();
+        spawn.spawnPosition = (new GameObject()).transform;
+        spawn.spawnPosition.position = new Vector2(1, 1);
+        spawn.item.tag = "Test";
+        var item = GameObject.FindWithTag("Test");
+        spawn.SpawnDroppedItem();
         yield return null;
-        Assert.AreEqual("Player", gameObject.tag);
+        Assert.That(item != null);
+    }
+
+    [UnityTest]
+    public IEnumerator ShootsWithPeriod()
+    {
+        var gameObject = new GameObject();
+        var periodShoot = gameObject.AddComponent<PeriodShoot>();
+        periodShoot.bullet = new GameObject();
+        periodShoot.firePoint = (new GameObject()).transform;
+        periodShoot.bullet.tag = "Test";
+        periodShoot.Shoot();
+        var item = GameObject.FindWithTag("Test");
+        yield return null;
+        Assert.That(item != null);
     }
 }
