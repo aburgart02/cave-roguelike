@@ -58,6 +58,7 @@
      <Compile Include="Assets\MovementAI.cs" />
      <Compile Include="Assets\JMO Assets\Cartoon FX\Demo\Assets\CFX_AutoStopLoopedEffect.cs" />
      <Compile Include="Assets\Mainmenu.cs" />
+     <Compile Include="Assets\Heal.cs" />
      <Compile Include="Assets\SpikesDamage.cs" />
      <Compile Include="Assets\bts\Pathfind.cs" />
      <Compile Include="Assets\JMO Assets\WarFX\Scripts\WFX_BulletHoleDecal.cs" />

@@ -31,7 +31,7 @@ public class Health : MonoBehaviour
                 var value = Random.Range(0,10);
                 if (value < 5)
                 {
-                    spawnPosition = GameObject.FindGameObjectWithTag("DropPosition").transform;
+                    //spawnPosition = GameObject.FindGameObjectWithTag("DropPosition").transform;
                     Instantiate(item, spawnPosition.position, Quaternion.identity);
                 }
                 Die();
