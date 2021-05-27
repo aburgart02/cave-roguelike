@@ -8,10 +8,20 @@ public class Fly : MonoBehaviour
     public float damage = 40f;
     public Rigidbody2D rb;
     public GameObject ShootAnimation;
+    public GameObject FireAnimation;
     void Start()
     {
         if (rb != null)
+        {
+            if (FireAnimation != null)
+            {
+                var fire = Instantiate(FireAnimation, gameObject.transform.position, gameObject.transform.rotation);
+                fire.AddComponent<Rigidbody2D>();
+                fire.GetComponent<Rigidbody2D>().velocity = transform.right * speed;
+                fire.GetComponent<Rigidbody2D>().gravityScale = 0;
+            }
             rb.velocity = transform.right * speed;
+        }
         if (ShootAnimation != null)
             Instantiate(ShootAnimation, gameObject.transform.position, gameObject.transform.rotation);
     }

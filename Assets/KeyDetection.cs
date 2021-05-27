@@ -10,10 +10,14 @@ public class KeyDetection : MonoBehaviour
     public Transform closingPosition;
     public bool canBeOpenedByKey;
     [SerializeField] public string keyTag = "GreenKey";
+    [SerializeField] private AudioSource Sound;
+
     void OnTriggerEnter2D(Collider2D collision)
     {
         if (collision.gameObject.CompareTag(keyTag))
         {
+            if (Sound != null)
+                Sound.Play();
             opening = true;
             canBeOpenedByKey = true;
             Destroy(collision.gameObject);
@@ -24,6 +28,8 @@ public class KeyDetection : MonoBehaviour
     {
         if (collision.gameObject.CompareTag("Player") && canBeOpenedByKey && Input.GetKeyDown(KeyCode.F))
         {
+            if (Sound != null)
+                Sound.Play();
             opening = !opening;
         }
     }
