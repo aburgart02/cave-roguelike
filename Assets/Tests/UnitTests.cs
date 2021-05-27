@@ -73,6 +73,7 @@ public class UnitTests
     [UnityTest]
     public IEnumerator MainMenuLoadGame()
     {
+        SceneManager.LoadScene(0);
         var gameObject = new GameObject();
         var menu = gameObject.AddComponent<Mainmenu>();
         menu.PlayGame();

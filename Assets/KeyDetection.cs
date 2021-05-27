@@ -30,10 +30,13 @@ public class KeyDetection : MonoBehaviour
 
     void Update()
     {
-        if (opening)
-            door.transform.position = Vector3.Lerp(door.transform.position, openingPosition.transform.position,  Time.deltaTime / 2);
-        else
-            door.transform.position = Vector3.Lerp(door.transform.position, closingPosition.transform.position, Time.deltaTime / 2);
+        if (door != null && openingPosition != null && closingPosition != null)
+        {
+            if (opening)
+                door.transform.position = Vector3.Lerp(door.transform.position, openingPosition.transform.position, Time.deltaTime / 2);
+            else
+                door.transform.position = Vector3.Lerp(door.transform.position, closingPosition.transform.position, Time.deltaTime / 2);
+        }
     }
 
 
