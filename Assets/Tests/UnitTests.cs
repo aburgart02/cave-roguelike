@@ -103,15 +103,16 @@ public class UnitTests
     }
 
     [UnityTest]
-    public IEnumerator FireShootBulletCreation()
+    public IEnumerator FireShootBulletCreationIsLimitedByMaxBullet()
     {
         var gameObject = new GameObject();
         var fire = gameObject.AddComponent<Fire>();
         fire.bullet = new GameObject();
         fire.Fireposition = (new GameObject()).transform;
-        fire.Shoot();
+        for (var i = 0; i < fire.maxBullets + 2; i++)
+            fire.Shoot();
         yield return null;
-        Assert.AreEqual(1, fire.bullets.Count);
+        Assert.AreEqual(fire.maxBullets, fire.bullets.Count);
     }
 
     [UnityTest]
