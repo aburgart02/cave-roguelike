@@ -137,4 +137,4 @@ MonoBehaviour:
   damage: 50
   ShootAnimation: {fileID: 100004, guid: b46890100828db6429ff69c322b45893, type: 3}
   explosionPosition: {fileID: 35715337335579742}
-  Explosion: {fileID: 0}
+  Sound: {fileID: 8300000, guid: 98c334b5800c46e4b86da51b46ff6a2e, type: 3}

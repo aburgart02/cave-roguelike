@@ -73,7 +73,7 @@ SpriteRenderer:
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: 0
   m_SortingLayer: 0
-  m_SortingOrder: 3
+  m_SortingOrder: 1
   m_Sprite: {fileID: 21300000, guid: d0a2b92e3e3432840b5bd6b1b2180063, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
@@ -138,3 +138,4 @@ MonoBehaviour:
   damage: 40
   rb: {fileID: 6467997361640511400}
   ShootAnimation: {fileID: 100008, guid: 7075bd5fe1480184695a32611c15da57, type: 3}
+  FireAnimation: {fileID: 100002, guid: b8f9e29cc9e6dcf4387b96b6dacc819e, type: 3}
