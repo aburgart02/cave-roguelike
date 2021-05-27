@@ -24,7 +24,7 @@ public class Health : MonoBehaviour
         {
             if (gameObject.CompareTag("Player"))
             {
-                SceneManager.LoadScene(0);
+                SceneManager.LoadScene(3);
             }
             if (gameObject.CompareTag("Boss"))
             {

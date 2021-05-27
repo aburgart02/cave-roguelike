@@ -43,8 +43,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 79f75bcae6ef3434fab240e6f1f438c7, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  rate: 60
-  maxEntities: 3
+  rate: 50
+  maxEntities: 2
   distance: 3
   entity: {fileID: 5135863935140522828, guid: 71e91a20746a98247a22b17b58760b8c, type: 3}
   position: {fileID: 8375680946823917350}
