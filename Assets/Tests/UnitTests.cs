@@ -17,6 +17,12 @@ public class UnitTests
         return obj;
     }
 
+    public static void PutObjectsAtTheSamePosition(GameObject first, GameObject second)
+    {
+        first.transform.position = new Vector2(0, 0);
+        second.transform.position = new Vector2(0, 0);
+    }
+
     [UnityTest]
     public IEnumerator HealthTakeDamage()
     {
@@ -159,7 +165,6 @@ public class UnitTests
         objForCollision.AddComponent<Health>();
         bullet.transform.position = new Vector2(0, 0);
         objForCollision.transform.position = new Vector2(0, 0);
-        Debug.Log(bullet.transform.position);
         yield return null;
         Assert.AreEqual(objForCollision.GetComponent<Health>().maxHealth - damage,
             objForCollision.GetComponent<Health>().health);
@@ -179,7 +184,6 @@ public class UnitTests
         bottle.GetComponent<Heal>().increasedHealth = health.health;
         bottle.transform.position = new Vector2(0, 0);
         objForCollision.transform.position = new Vector2(0, 0);
-        Debug.Log(bottle.transform.position);
         yield return new WaitForSeconds(0.25f);
         Assert.AreEqual(health.maxHealth, health.health);
     }
@@ -194,8 +198,59 @@ public class UnitTests
         objForCollision.AddComponent<Health>();
         bottle.transform.position = new Vector2(0, 0);
         objForCollision.transform.position = new Vector2(0, 0);
-        Debug.Log(bottle.transform.position);
         yield return new WaitForSeconds(0.25f);
         Assert.That(bottle == null);
+    }
+
+    [UnityTest]
+    public IEnumerator KeyDetectionDoorOpeningWhenTriggersWithRightKey()
+    {
+        var door = CreateGameObjectWithCollider(true);
+        door.AddComponent<KeyDetection>();
+        door.GetComponent<KeyDetection>().keyTag = "RedKey";
+        var key = CreateGameObjectWithCollider(true);
+        key.tag = "RedKey";
+        PutObjectsAtTheSamePosition(door, key);
+        yield return new WaitForSeconds(0.25f);
+        Assert.AreEqual(true, door.GetComponent<KeyDetection>().opening);
+    }
+
+    [UnityTest]
+    public IEnumerator KeyDetectionDoorNotOpeningWhenTriggersWithWrongKey()
+    {
+        var door = CreateGameObjectWithCollider(true);
+        door.AddComponent<KeyDetection>();
+        door.GetComponent<KeyDetection>().keyTag = "RedKey";
+        var key = CreateGameObjectWithCollider(true);
+        key.tag = "BlueKey";
+        PutObjectsAtTheSamePosition(door, key);
+        yield return new WaitForSeconds(0.25f);
+        Assert.AreEqual(false, door.GetComponent<KeyDetection>().opening);
+    }
+
+    [UnityTest]
+    public IEnumerator KeyDetectionRightKeyIsDestroyedAfterTriggerWithDoor()
+    {
+        var door = CreateGameObjectWithCollider(true);
+        door.AddComponent<KeyDetection>();
+        door.GetComponent<KeyDetection>().keyTag = "RedKey";
+        var key = CreateGameObjectWithCollider(true);
+        key.tag = "RedKey";
+        PutObjectsAtTheSamePosition(door, key);
+        yield return new WaitForSeconds(0.25f);
+        Assert.That(key == null);
+    }
+
+    [UnityTest]
+    public IEnumerator KeyDetectionWrongKeyIsNotDestroyedAfterTriggerWithDoor()
+    {
+        var door = CreateGameObjectWithCollider(true);
+        door.AddComponent<KeyDetection>();
+        door.GetComponent<KeyDetection>().keyTag = "RedKey";
+        var key = CreateGameObjectWithCollider(true);
+        key.tag = "BlueKey";
+        PutObjectsAtTheSamePosition(door, key);
+        yield return new WaitForSeconds(0.25f);
+        Assert.That(key != null);
     }
 }
