@@ -22,12 +22,12 @@ public class Pathfind : MonoBehaviour
 
 	Vector2[] FindPath(Vector2 from, Vector2 to)
 	{
-		Stopwatch sw = new Stopwatch();
+		var sw = new Stopwatch();
 		sw.Start();
-		Vector2[] waypoints = new Vector2[0];
-		bool pathSuccess = false;
-		Node startNode = grid.NodeFromWorldPoint(from);
-		Node targetNode = grid.NodeFromWorldPoint(to);
+		var waypoints = new Vector2[0];
+		var pathSuccess = false;
+		var startNode = grid.NodeFromWorldPoint(from);
+		var targetNode = grid.NodeFromWorldPoint(to);
 		startNode.parent = startNode;
 		if (!startNode.walkable)
 			startNode = grid.ClosestWalkableNode(startNode);
@@ -35,12 +35,12 @@ public class Pathfind : MonoBehaviour
 			targetNode = grid.ClosestWalkableNode(targetNode);
 		if (startNode.walkable && targetNode.walkable)
 		{
-			Heap<Node> openSet = new Heap<Node>(grid.MaxSize);
-			HashSet<Node> closedSet = new HashSet<Node>();
+			var openSet = new Heap<Node>(grid.MaxSize);
+			var closedSet = new HashSet<Node>();
 			openSet.Add(startNode);
 			while (openSet.Count > 0)
 			{
-				Node currentNode = openSet.RemoveFirst();
+				var currentNode = openSet.RemoveFirst();
 				closedSet.Add(currentNode);
 				if (currentNode == targetNode)
 				{
@@ -51,9 +51,8 @@ public class Pathfind : MonoBehaviour
 				}
 				foreach (Node neighbour in grid.GetNeighbours(currentNode))
 				{
-					if (!neighbour.walkable || closedSet.Contains(neighbour))
-						continue;
-					int newMovementCostToNeighbour = currentNode.gCost + GetDistance(currentNode, neighbour) + TurningCost(currentNode, neighbour);
+					if (!neighbour.walkable || closedSet.Contains(neighbour)) continue;
+					var newMovementCostToNeighbour = currentNode.gCost + GetDistance(currentNode, neighbour);
 					if (newMovementCostToNeighbour < neighbour.gCost || !openSet.Contains(neighbour))
 					{
 						neighbour.gCost = newMovementCostToNeighbour;
@@ -67,14 +66,8 @@ public class Pathfind : MonoBehaviour
 				}
 			}
 		}
-		if (pathSuccess)
-			waypoints = RetracePath(startNode, targetNode);
+		if (pathSuccess) waypoints = RetracePath(startNode, targetNode);
 		return waypoints;
-	}
-
-	int TurningCost(Node from, Node to)
-	{
-		return 0;
 	}
 
 	Vector2[] RetracePath(Node startNode, Node endNode)
