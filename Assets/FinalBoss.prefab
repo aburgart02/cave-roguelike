@@ -167,8 +167,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 0c1525e68cd1c4848b330ee3e547db8a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  maxHealth: 100
-  health: 100
+  maxHealth: 300
+  health: 300
   healthBar: {fileID: 0}
   DeathAnimation: {fileID: 100004, guid: 7867af58a6ec48846ae807eb4022fbaa, type: 3}
   item: {fileID: 8876403750433503901, guid: f5ea15f068121da4caa28b5dad098e07, type: 3}
@@ -185,7 +185,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 964e6f47cd8418049a2cd67c8ea00938, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  Period: 5
+  Period: 10
   firePoint: {fileID: 5135863934199132164}
   bullet: {fileID: 2515986222758999616, guid: fdff44a6731d0d345a4b0e4707788d66, type: 3}
   Shot: {fileID: -3364460239420775206}
