@@ -29,7 +29,7 @@ public class UnitTests
         var gameObject = new GameObject();
         var health = gameObject.AddComponent<Health>();
         health.TakeDamage(20);
-        yield return null;
+        yield return new WaitForSeconds(0.25f);
         Assert.AreEqual(health.maxHealth - 20, health.health);
     }
 
@@ -39,7 +39,7 @@ public class UnitTests
         var gameObject = new GameObject();
         var health = gameObject.AddComponent<Health>();
         health.TakeDamage(health.maxHealth);
-        yield return null;
+        yield return new WaitForSeconds(0.25f);
         Assert.That(gameObject == null);
     }
 
@@ -51,7 +51,7 @@ public class UnitTests
         gameObject.tag = "Player";
         var health = gameObject.AddComponent<Health>();
         health.TakeDamage(health.maxHealth);
-        yield return null;
+        yield return new WaitForSeconds(0.25f);
         Assert.AreEqual("Menu", SceneManager.GetActiveScene().name);
     }
 
@@ -77,7 +77,7 @@ public class UnitTests
         var health = gameObject.AddComponent<Health>();
         health.health = 50;
         health.HealPlayer(20);
-        yield return null;
+        yield return new WaitForSeconds(0.25f);
         Assert.AreEqual(70, health.health);
     }
 
@@ -87,7 +87,7 @@ public class UnitTests
         var gameObject = new GameObject();
         var health = gameObject.AddComponent<Health>();
         health.HealPlayer(20);
-        yield return null;
+        yield return new WaitForSeconds(0.25f);
         Assert.AreEqual(health.maxHealth, health.health);
     }
 
@@ -98,7 +98,7 @@ public class UnitTests
         var gameObject = new GameObject();
         var menu = gameObject.AddComponent<Mainmenu>();
         menu.PlayGame();
-        yield return null;
+        yield return new WaitForSeconds(0.25f);
         Assert.That(SceneManager.GetActiveScene().name != "Menu");
     }
 
@@ -111,7 +111,7 @@ public class UnitTests
         fire.Fireposition = (new GameObject()).transform;
         for (var i = 0; i < fire.maxBullets + 2; i++)
             fire.Shoot();
-        yield return null;
+        yield return new WaitForSeconds(0.25f);
         Assert.AreEqual(fire.maxBullets, fire.bullets.Count);
     }
 
@@ -124,7 +124,7 @@ public class UnitTests
         fire.Fireposition = (new GameObject()).transform;
         fire.Fireposition.position = new Vector2(1, 1);
         fire.Shoot();
-        yield return null;
+        yield return new WaitForSeconds(0.25f);
         Assert.AreEqual(fire.Fireposition.position, fire.bullets[0].transform.position);
     }
 
@@ -140,7 +140,7 @@ public class UnitTests
         var testObjectsCountBeforeSpawnDroppedItem = GameObject.FindGameObjectsWithTag("Test").Length;
         spawn.SpawnDroppedItem();
         var testObjectsCountAfterSpawnDroppedItem = GameObject.FindGameObjectsWithTag("Test").Length;
-        yield return null;
+        yield return new WaitForSeconds(0.25f);
         Assert.AreEqual(1, testObjectsCountAfterSpawnDroppedItem - testObjectsCountBeforeSpawnDroppedItem);
     }
 
@@ -155,7 +155,7 @@ public class UnitTests
         var testObjectsCountBeforeSpawnDroppedItem = GameObject.FindGameObjectsWithTag("Test").Length;
         periodShoot.Shoot();
         var testObjectsCountAfterSpawnDroppedItem = GameObject.FindGameObjectsWithTag("Test").Length;
-        yield return null;
+        yield return new WaitForSeconds(0.25f);
         Assert.AreEqual(1, testObjectsCountAfterSpawnDroppedItem - testObjectsCountBeforeSpawnDroppedItem);
     }
 
@@ -179,7 +179,7 @@ public class UnitTests
         var objForCollision = CreateGameObjectWithCollider(false);
         objForCollision.AddComponent<Health>();
         PutObjectsAtTheSamePosition(bullet, objForCollision);
-        yield return null;
+        yield return new WaitForSeconds(0.25f);
         Assert.AreEqual(objForCollision.GetComponent<Health>().maxHealth - damage,
             objForCollision.GetComponent<Health>().health);
     }
