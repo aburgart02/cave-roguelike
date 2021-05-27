@@ -18,6 +18,7 @@ TagManager:
   - Mouse
   - Bullet
   - Test
+  - Boss
   layers:
   - Default
   - TransparentFX

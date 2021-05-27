@@ -72,10 +72,10 @@ MonoBehaviour:
     y: 30
     width: 1920
     height: 947
-  m_MinSize: {x: 503, y: 492}
+  m_MinSize: {x: 677, y: 492}
   m_MaxSize: {x: 14001, y: 14042}
   vertical: 0
-  controlID: 122
+  controlID: 636
 --- !u!114 &4
 MonoBehaviour:
   m_ObjectHideFlags: 52
@@ -86,7 +86,7 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 1
   m_Script: {fileID: 12006, guid: 0000000000000000e000000000000000, type: 0}
-  m_Name: TestRunnerWindow
+  m_Name: InspectorWindow
   m_EditorClassIdentifier: 
   m_Children: []
   m_Position:
@@ -95,14 +95,14 @@ MonoBehaviour:
     y: 0
     width: 626
     height: 947
-  m_MinSize: {x: 100, y: 100}
+  m_MinSize: {x: 275, y: 50}
   m_MaxSize: {x: 4000, y: 4000}
-  m_ActualView: {fileID: 12}
+  m_ActualView: {fileID: 14}
   m_Panes:
   - {fileID: 14}
   - {fileID: 12}
-  m_Selected: 1
-  m_LastSelected: 0
+  m_Selected: 0
+  m_LastSelected: 1
 --- !u!114 &5
 MonoBehaviour:
   m_ObjectHideFlags: 52
@@ -122,8 +122,8 @@ MonoBehaviour:
     y: 0
     width: 319
     height: 676
-  m_MinSize: {x: 201, y: 221}
-  m_MaxSize: {x: 4001, y: 4021}
+  m_MinSize: {x: 200, y: 200}
+  m_MaxSize: {x: 4000, y: 4000}
   m_ActualView: {fileID: 15}
   m_Panes:
   - {fileID: 15}
@@ -178,7 +178,7 @@ MonoBehaviour:
     y: 0
     width: 1920
     height: 997
-  m_MinSize: {x: 875, y: 542}
+  m_MinSize: {x: 875, y: 300}
   m_MaxSize: {x: 10000, y: 10000}
   m_UseTopView: 1
   m_TopViewHeight: 30
@@ -251,10 +251,10 @@ MonoBehaviour:
     y: 0
     width: 1294
     height: 947
-  m_MinSize: {x: 403, y: 492}
+  m_MinSize: {x: 402, y: 492}
   m_MaxSize: {x: 10001, y: 14042}
   vertical: 1
-  controlID: 57
+  controlID: 126
 --- !u!114 &11
 MonoBehaviour:
   m_ObjectHideFlags: 52
@@ -276,10 +276,10 @@ MonoBehaviour:
     y: 0
     width: 1294
     height: 676
-  m_MinSize: {x: 403, y: 221}
-  m_MaxSize: {x: 8003, y: 4021}
+  m_MinSize: {x: 402, y: 221}
+  m_MaxSize: {x: 8002, y: 4021}
   vertical: 0
-  controlID: 58
+  controlID: 127
 --- !u!114 &12
 MonoBehaviour:
   m_ObjectHideFlags: 52
@@ -306,7 +306,7 @@ MonoBehaviour:
     height: 926
   m_ViewDataDictionary: {fileID: 0}
   m_Spl:
-    ID: 154
+    ID: 151
     splitterInitialOffset: 0
     currentActiveSplitter: -1
     realSizes:
@@ -337,9 +337,9 @@ MonoBehaviour:
       uniqueId: '[Roguelike][suite]'
       name: Roguelike
       fullName: Roguelike
-      resultStatus: 2
-      duration: 1.623126
-      messages: One or more child tests had errors
+      resultStatus: 1
+      duration: 6.4639277
+      messages: 
       output: 
       stacktrace: 
       notRunnable: 0
@@ -353,9 +353,9 @@ MonoBehaviour:
       uniqueId: "[Tests][C:/Users/\u0410\u0440\u0442\u0451\u043C/Desktop/Roguelike-in-cave/Library/ScriptAssemblies/Tests.dll][suite]"
       name: Tests.dll
       fullName: "C:/Users/\u0410\u0440\u0442\u0451\u043C/Desktop/Roguelike-in-cave/Library/ScriptAssemblies/Tests.dll"
-      resultStatus: 2
-      duration: 1.5877422
-      messages: One or more child tests had errors
+      resultStatus: 1
+      duration: 6.421672
+      messages: 
       output: 
       stacktrace: 
       notRunnable: 0
@@ -369,9 +369,9 @@ MonoBehaviour:
       uniqueId: Tests.dll/[Tests][UnitTests][suite]
       name: UnitTests
       fullName: UnitTests
-      resultStatus: 2
-      duration: 1.5823913
-      messages: One or more child tests had errors
+      resultStatus: 1
+      duration: 6.416609
+      messages: 
       output: 
       stacktrace: 
       notRunnable: 0
@@ -386,7 +386,7 @@ MonoBehaviour:
       name: FireBulletSpawnAtFirePosition
       fullName: UnitTests.FireBulletSpawnAtFirePosition
       resultStatus: 1
-      duration: 0.0244136
+      duration: 0.2745428
       messages: 
       output: 
       stacktrace: 
@@ -398,12 +398,80 @@ MonoBehaviour:
       - Uncategorized
       parentId: 1001
       parentUniqueId: Tests.dll/[Tests][UnitTests][suite]
-    - id: 1008
-      uniqueId: Tests.dll/UnitTests/[Tests][UnitTests.FireShootBulletCreation]
-      name: FireShootBulletCreation
-      fullName: UnitTests.FireShootBulletCreation
+    - id: 1009
+      uniqueId: Tests.dll/UnitTests/[Tests][UnitTests.FireShootBulletCreationIsLimitedByMaxBullet]
+      name: FireShootBulletCreationIsLimitedByMaxBullet
+      fullName: UnitTests.FireShootBulletCreationIsLimitedByMaxBullet
       resultStatus: 1
-      duration: 0.0170715
+      duration: 0.2566028
+      messages: 
+      output: 
+      stacktrace: 
+      notRunnable: 0
+      ignoredOrSkipped: 0
+      description: 
+      isSuite: 0
+      categories:
+      - Uncategorized
+      parentId: 1001
+      parentUniqueId: Tests.dll/[Tests][UnitTests][suite]
+    - id: 1014
+      uniqueId: Tests.dll/UnitTests/[Tests][UnitTests.FlyDamageWhenTrigger]
+      name: FlyDamageWhenTrigger
+      fullName: UnitTests.FlyDamageWhenTrigger
+      resultStatus: 1
+      duration: 0.2560998
+      messages: 
+      output: 
+      stacktrace: 
+      notRunnable: 0
+      ignoredOrSkipped: 0
+      description: 
+      isSuite: 0
+      categories:
+      - Uncategorized
+      parentId: 1001
+      parentUniqueId: Tests.dll/[Tests][UnitTests][suite]
+    - id: 1013
+      uniqueId: Tests.dll/UnitTests/[Tests][UnitTests.FlyObjectDieWhenTrigger]
+      name: FlyObjectDieWhenTrigger
+      fullName: UnitTests.FlyObjectDieWhenTrigger
+      resultStatus: 1
+      duration: 0.2559221
+      messages: 
+      output: 
+      stacktrace: 
+      notRunnable: 0
+      ignoredOrSkipped: 0
+      description: 
+      isSuite: 0
+      categories:
+      - Uncategorized
+      parentId: 1001
+      parentUniqueId: Tests.dll/[Tests][UnitTests][suite]
+    - id: 1016
+      uniqueId: Tests.dll/UnitTests/[Tests][UnitTests.HealDestroyAfterTrigger]
+      name: HealDestroyAfterTrigger
+      fullName: UnitTests.HealDestroyAfterTrigger
+      resultStatus: 1
+      duration: 0.256515
+      messages: 
+      output: 
+      stacktrace: 
+      notRunnable: 0
+      ignoredOrSkipped: 0
+      description: 
+      isSuite: 0
+      categories:
+      - Uncategorized
+      parentId: 1001
+      parentUniqueId: Tests.dll/[Tests][UnitTests][suite]
+    - id: 1015
+      uniqueId: Tests.dll/UnitTests/[Tests][UnitTests.HealIncreaseHealthWhenTrigger]
+      name: HealIncreaseHealthWhenTrigger
+      fullName: UnitTests.HealIncreaseHealthWhenTrigger
+      resultStatus: 1
+      duration: 0.2554596
       messages: 
       output: 
       stacktrace: 
@@ -420,7 +488,7 @@ MonoBehaviour:
       name: HealPlayerWhenHealthIsGreaterThanMaxHealth
       fullName: UnitTests.HealPlayerWhenHealthIsGreaterThanMaxHealth
       resultStatus: 1
-      duration: 0.0110845
+      duration: 0.256157
       messages: 
       output: 
       stacktrace: 
@@ -437,45 +505,7 @@ MonoBehaviour:
       name: HealPlayerWhenHealthIsLessThanMaxHealth
       fullName: UnitTests.HealPlayerWhenHealthIsLessThanMaxHealth
       resultStatus: 1
-      duration: 0.0076096
-      messages: 
-      output: 
-      stacktrace: 
-      notRunnable: 0
-      ignoredOrSkipped: 0
-      description: 
-      isSuite: 0
-      categories:
-      - Uncategorized
-      parentId: 1001
-      parentUniqueId: Tests.dll/[Tests][UnitTests][suite]
-    - id: 1003
-      uniqueId: Tests.dll/UnitTests/[Tests][UnitTests.HealthIsZeroNotPlayer]
-      name: HealthIsZeroNotPlayer
-      fullName: UnitTests.HealthIsZeroNotPlayer
-      resultStatus: 2
-      duration: 0.0074688
-      messages: 'System.NullReferenceException : Object reference not set to an instance
-        of an object'
-      output: 
-      stacktrace: "  at Health.TakeDamage (System.Int32 damage) [0x00059] in C:\\Users\\\u0410\u0440\u0442\u0451\u043C\\Desktop\\Roguelike-in-cave\\Assets\\Health.cs:34
-        \r\n  at UnitTests+<HealthIsZeroNotPlayer>d__1.MoveNext () [0x0002d] in C:\\Users\\\u0410\u0440\u0442\u0451\u043C\\Desktop\\Roguelike-in-cave\\Assets\\Tests\\UnitTests.cs:25
-        \r\n  at UnityEngine.TestTools.TestEnumerator+<Execute>d__6.MoveNext () [0x00038]
-        in C:\\Users\\\u0410\u0440\u0442\u0451\u043C\\Desktop\\Roguelike-in-cave\\Library\\PackageCache\\com.unity.test-framework@1.1.24\\UnityEngine.TestRunner\\NUnitExtensions\\Attributes\\TestEnumerator.cs:36 "
-      notRunnable: 0
-      ignoredOrSkipped: 0
-      description: 
-      isSuite: 0
-      categories:
-      - Uncategorized
-      parentId: 1001
-      parentUniqueId: Tests.dll/[Tests][UnitTests][suite]
-    - id: 1004
-      uniqueId: Tests.dll/UnitTests/[Tests][UnitTests.HealthIsZeroPlayer]
-      name: HealthIsZeroPlayer
-      fullName: UnitTests.HealthIsZeroPlayer
-      resultStatus: 1
-      duration: 0.0864169
+      duration: 0.2556159
       messages: 
       output: 
       stacktrace: 
@@ -492,7 +522,7 @@ MonoBehaviour:
       name: HealthTakeDamage
       fullName: UnitTests.HealthTakeDamage
       resultStatus: 1
-      duration: 0.0858393
+      duration: 0.2552406
       messages: 
       output: 
       stacktrace: 
@@ -504,12 +534,131 @@ MonoBehaviour:
       - Uncategorized
       parentId: 1007
       parentUniqueId: Tests.dll/[Tests][UnitTests][suite]
+    - id: 1005
+      uniqueId: Tests.dll/UnitTests/[Tests][UnitTests.HealthThereIsAnimationAfterDeath]
+      name: HealthThereIsAnimationAfterDeath
+      fullName: UnitTests.HealthThereIsAnimationAfterDeath
+      resultStatus: 1
+      duration: 0.2559775
+      messages: 
+      output: 
+      stacktrace: 
+      notRunnable: 0
+      ignoredOrSkipped: 0
+      description: 
+      isSuite: 0
+      categories:
+      - Uncategorized
+      parentId: 1001
+      parentUniqueId: Tests.dll/[Tests][UnitTests][suite]
+    - id: 1003
+      uniqueId: Tests.dll/UnitTests/[Tests][UnitTests.HealthWhenNotPlayerHasZeroHealth]
+      name: HealthWhenNotPlayerHasZeroHealth
+      fullName: UnitTests.HealthWhenNotPlayerHasZeroHealth
+      resultStatus: 1
+      duration: 0.2555801
+      messages: 
+      output: 
+      stacktrace: 
+      notRunnable: 0
+      ignoredOrSkipped: 0
+      description: 
+      isSuite: 0
+      categories:
+      - Uncategorized
+      parentId: 1001
+      parentUniqueId: Tests.dll/[Tests][UnitTests][suite]
+    - id: 1004
+      uniqueId: Tests.dll/UnitTests/[Tests][UnitTests.HealthWhenPlayerHasZeroHealth]
+      name: HealthWhenPlayerHasZeroHealth
+      fullName: UnitTests.HealthWhenPlayerHasZeroHealth
+      resultStatus: 1
+      duration: 0.4097757
+      messages: 
+      output: 
+      stacktrace: 
+      notRunnable: 0
+      ignoredOrSkipped: 0
+      description: 
+      isSuite: 0
+      categories:
+      - Uncategorized
+      parentId: 1001
+      parentUniqueId: Tests.dll/[Tests][UnitTests][suite]
+    - id: 1018
+      uniqueId: Tests.dll/UnitTests/[Tests][UnitTests.KeyDetectionDoorNotOpeningWhenTriggersWithWrongKey]
+      name: KeyDetectionDoorNotOpeningWhenTriggersWithWrongKey
+      fullName: UnitTests.KeyDetectionDoorNotOpeningWhenTriggersWithWrongKey
+      resultStatus: 1
+      duration: 0.2576845
+      messages: 
+      output: 
+      stacktrace: 
+      notRunnable: 0
+      ignoredOrSkipped: 0
+      description: 
+      isSuite: 0
+      categories:
+      - Uncategorized
+      parentId: 1001
+      parentUniqueId: Tests.dll/[Tests][UnitTests][suite]
+    - id: 1017
+      uniqueId: Tests.dll/UnitTests/[Tests][UnitTests.KeyDetectionDoorOpeningWhenTriggersWithRightKey]
+      name: KeyDetectionDoorOpeningWhenTriggersWithRightKey
+      fullName: UnitTests.KeyDetectionDoorOpeningWhenTriggersWithRightKey
+      resultStatus: 1
+      duration: 0.2570989
+      messages: 
+      output: 
+      stacktrace: 
+      notRunnable: 0
+      ignoredOrSkipped: 0
+      description: 
+      isSuite: 0
+      categories:
+      - Uncategorized
+      parentId: 1001
+      parentUniqueId: Tests.dll/[Tests][UnitTests][suite]
+    - id: 1019
+      uniqueId: Tests.dll/UnitTests/[Tests][UnitTests.KeyDetectionRightKeyIsDestroyedAfterTriggerWithDoor]
+      name: KeyDetectionRightKeyIsDestroyedAfterTriggerWithDoor
+      fullName: UnitTests.KeyDetectionRightKeyIsDestroyedAfterTriggerWithDoor
+      resultStatus: 1
+      duration: 0.2564529
+      messages: 
+      output: 
+      stacktrace: 
+      notRunnable: 0
+      ignoredOrSkipped: 0
+      description: 
+      isSuite: 0
+      categories:
+      - Uncategorized
+      parentId: 1001
+      parentUniqueId: Tests.dll/[Tests][UnitTests][suite]
+    - id: 1020
+      uniqueId: Tests.dll/UnitTests/[Tests][UnitTests.KeyDetectionWrongKeyIsNotDestroyedAfterTriggerWithDoor]
+      name: KeyDetectionWrongKeyIsNotDestroyedAfterTriggerWithDoor
+      fullName: UnitTests.KeyDetectionWrongKeyIsNotDestroyedAfterTriggerWithDoor
+      resultStatus: 1
+      duration: 0.2567927
+      messages: 
+      output: 
+      stacktrace: 
+      notRunnable: 0
+      ignoredOrSkipped: 0
+      description: 
+      isSuite: 0
+      categories:
+      - Uncategorized
+      parentId: 1001
+      parentUniqueId: Tests.dll/[Tests][UnitTests][suite]
     - id: 1008
       uniqueId: Tests.dll/UnitTests/[Tests][UnitTests.MainMenuLoadGame]
       name: MainMenuLoadGame
       fullName: UnitTests.MainMenuLoadGame
       resultStatus: 1
-      duration: 1.1880112
+      duration: 1.6075203
       messages: 
       output: 'Path found: 2 ms
 
@@ -525,12 +674,12 @@ MonoBehaviour:
       - Uncategorized
       parentId: 1001
       parentUniqueId: Tests.dll/[Tests][UnitTests][suite]
-    - id: 1011
-      uniqueId: Tests.dll/UnitTests/[Tests][UnitTests.ShootsWithPeriod]
-      name: ShootsWithPeriod
-      fullName: UnitTests.ShootsWithPeriod
+    - id: 1012
+      uniqueId: Tests.dll/UnitTests/[Tests][UnitTests.PeriodShootSpawnObjectAfterShoot]
+      name: PeriodShootSpawnObjectAfterShoot
+      fullName: UnitTests.PeriodShootSpawnObjectAfterShoot
       resultStatus: 1
-      duration: 0.130284
+      duration: 0.258837
       messages: 
       output: 
       stacktrace: 
@@ -542,12 +691,12 @@ MonoBehaviour:
       - Uncategorized
       parentId: 1001
       parentUniqueId: Tests.dll/[Tests][UnitTests][suite]
-    - id: 1010
-      uniqueId: Tests.dll/UnitTests/[Tests][UnitTests.SpawnItem]
-      name: SpawnItem
-      fullName: UnitTests.SpawnItem
+    - id: 1011
+      uniqueId: Tests.dll/UnitTests/[Tests][UnitTests.SpawnNewObjectAfterDrop]
+      name: SpawnNewObjectAfterDrop
+      fullName: UnitTests.SpawnNewObjectAfterDrop
       resultStatus: 1
-      duration: 0.0085769
+      duration: 0.2585745
       messages: 
       output: 
       stacktrace: 
@@ -693,10 +842,10 @@ MonoBehaviour:
   m_LockTracker:
     m_IsLocked: 0
   m_FolderTreeState:
-    scrollPos: {x: 0, y: 26}
-    m_SelectedIDs: c8520000
-    m_LastClickedID: 21192
-    m_ExpandedIDs: 00000000c8520000ca520000cc520000ce520000d0520000d2520000d4520000d6520000d8520000da520000dc520000de520000e0520000e2520000e452000000ca9a3b
+    scrollPos: {x: 0, y: 0}
+    m_SelectedIDs: d44c0000
+    m_LastClickedID: 19668
+    m_ExpandedIDs: 00000000d44c0000d64c0000d84c0000da4c0000dc4c0000de4c0000e04c0000e24c0000e44c0000e64c0000e84c0000ea4c0000ec4c0000ee4c00000e4d0000be6000003067000000ca9a3b
     m_RenameOverlay:
       m_UserAcceptedRename: 0
       m_Name: 
@@ -724,7 +873,7 @@ MonoBehaviour:
     scrollPos: {x: 0, y: 0}
     m_SelectedIDs: 
     m_LastClickedID: 0
-    m_ExpandedIDs: 00000000c8520000ca520000cc520000ce520000d0520000d2520000d4520000d6520000d8520000da520000dc520000de520000e0520000e2520000e4520000
+    m_ExpandedIDs: 00000000d44c0000d64c0000d84c0000da4c0000dc4c0000de4c0000e04c0000e24c0000e44c0000e64c0000e84c0000ea4c0000ec4c0000ee4c0000f04c0000
     m_RenameOverlay:
       m_UserAcceptedRename: 0
       m_Name: 
@@ -751,7 +900,7 @@ MonoBehaviour:
   m_ListAreaState:
     m_SelectedInstanceIDs: 
     m_LastClickedInstanceID: 0
-    m_HadKeyboardFocusLastEvent: 0
+    m_HadKeyboardFocusLastEvent: 1
     m_ExpandedInstanceIDs: c6230000104a000000000000
     m_RenameOverlay:
       m_UserAcceptedRename: 0
@@ -768,7 +917,7 @@ MonoBehaviour:
       m_IsRenaming: 0
       m_OriginalEventType: 11
       m_IsRenamingFilename: 1
-      m_ClientGUIView: {fileID: 0}
+      m_ClientGUIView: {fileID: 6}
     m_CreateAssetUtility:
       m_EndAction: {fileID: 0}
       m_InstanceID: 0
@@ -776,7 +925,7 @@ MonoBehaviour:
       m_Icon: {fileID: 0}
       m_ResourceFile: 
     m_NewAssetIndexInList: -1
-    m_ScrollPosition: {x: 0, y: 0}
+    m_ScrollPosition: {x: 0, y: 44}
     m_GridSize: 71
   m_SkipHiddenPackages: 0
   m_DirectoriesAreaWidth: 207
@@ -812,7 +961,7 @@ MonoBehaviour:
     m_ControlHash: -371814159
     m_PrefName: Preview_InspectorPreview
   m_LastInspectedObjectInstanceID: -1
-  m_LastVerticalScrollValue: 0
+  m_LastVerticalScrollValue: 540
   m_GlobalObjectId: 
   m_LockTracker:
     m_IsLocked: 0
@@ -847,7 +996,7 @@ MonoBehaviour:
       scrollPos: {x: 0, y: 0}
       m_SelectedIDs: 
       m_LastClickedID: 0
-      m_ExpandedIDs: a489ffff128affff508dffff1898ffff8698ffffcc9bffff52c0ffffc0c0fffffec3ffff40c6ffffaec6ffffc6c9ffffcccdffff2aceffffaed0ffffc6e8ffff34e9ffff50ecffff56efffffc4efffffd8f2ffff7cf7ffff5af9ffff4281000058810000
+      m_ExpandedIDs: f807fcff0ee6fcffd284feff3cb0feff88e7feff40edfeffae06ffffbab6ffff28b7fffff6bffffff8edffff66eeffff18f7ffffa8f8ffff5efaffffaa720000d4720000447300005e730000
       m_RenameOverlay:
         m_UserAcceptedRename: 0
         m_Name: 
@@ -907,9 +1056,9 @@ MonoBehaviour:
   m_PlayAudio: 0
   m_AudioPlay: 0
   m_Position:
-    m_Target: {x: -2.3675401, y: -2.1046498, z: -753.3855}
+    m_Target: {x: -0.9229267, y: 14.666151, z: -5.4117136}
     speed: 2
-    m_Value: {x: -2.2734783, y: -2.0126784, z: -753.3525}
+    m_Value: {x: -0.9229267, y: 14.666151, z: -5.4117136}
   m_RenderMode: 0
   m_CameraMode:
     drawMode: 0
@@ -960,9 +1109,9 @@ MonoBehaviour:
     speed: 2
     m_Value: {x: 0, y: 0, z: 0, w: 1}
   m_Size:
-    m_Target: 7.6693993
+    m_Target: 4.889245
     speed: 2
-    m_Value: 7.339138
+    m_Value: 4.6787033
   m_Ortho:
     m_Target: 1
     speed: 2

@@ -26,9 +26,14 @@ public class Health : MonoBehaviour
             {
                 SceneManager.LoadScene(0);
             }
+            if (gameObject.CompareTag("Boss"))
+            {
+                Instantiate(item, spawnPosition.position, Quaternion.identity);
+                Die();
+            }
             else
             {
-                var value = Random.Range(0,10);
+                var value = Random.Range(0, 10);
                 if (value < 5)
                 {
                     if (item != null)
