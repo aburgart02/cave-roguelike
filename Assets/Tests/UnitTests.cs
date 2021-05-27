@@ -52,7 +52,7 @@ public class UnitTests
         var health = gameObject.AddComponent<Health>();
         health.TakeDamage(health.maxHealth);
         yield return new WaitForSeconds(0.25f);
-        Assert.AreEqual("Menu", SceneManager.GetActiveScene().name);
+        Assert.AreEqual("GameOverScene", SceneManager.GetActiveScene().name);
     }
 
     [UnityTest]
